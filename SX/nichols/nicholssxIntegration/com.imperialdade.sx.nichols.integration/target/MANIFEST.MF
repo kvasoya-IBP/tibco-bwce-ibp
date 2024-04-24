@@ -1,0 +1,28 @@
+Manifest-Version: 1.0.0.202404011203
+Bundle-ManifestVersion: 2
+Bundle-Name: Com Imperialdade nichols Integration Module
+Bundle-SymbolicName: com.imperialdade.sx.nichols.integration
+Bundle-Version: 1.0.0.202404011203
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tibco
+ .bw.module; filter:="(&(name=com.imperialdade.common.canonical)(version
+ =1.0.0))",com.tibco.bw.module; filter:="(&(name=com.imperialdade.common
+ .jdbc.connection)(version=1.0.0))",com.tibco.bw.module; filter:="(&(nam
+ e=com.imperialdade.common.jms.connection)(version=1.0.0))",com.tibco.bw
+ .module; filter:="(&(name=com.imperialdade.common.logging)(version=1.0.
+ 0))",com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.sftp
+ .connection)(version=1.0.0))",com.tibco.bw.palette; filter:="(name=bw.g
+ eneralactivities)",com.tibco.bw.palette; filter:="(name=bw.jdbc)",com.t
+ ibco.bw.palette; filter:="(name=bw.file)",com.tibco.bw.palette; filter:
+ ="(name=bw.restjson)",com.tibco.bw.palette; filter:="(name=bw.sftp)",co
+ m.tibco.bw.palette; filter:="(name=bw.jms)",com.tibco.bw.palette; filte
+ r:="(name=bw.xml)",com.tibco.bw.palette; filter:="(name=bw.parse)",com.
+ tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)"
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 2.9.0 V23 2023-11-10
+Bundle-ClassPath: .
+

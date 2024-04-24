@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://com.imperialdade/schema/canonical/v1"
+	elementFormDefault="qualified"
+	targetNamespace="http://com.imperialdade/schema/canonical/v1">
+	<complexType name="OrderType">
+		<sequence>
+			<element minOccurs="1" name="ApplicationArea"
+				type="tns:ApplicationAreaType" />
+			<element maxOccurs="1" minOccurs="1" name="Header"
+				type="tns:HeaderType">
+			</element>
+			<element maxOccurs="unbounded" minOccurs="1" name="Details"
+				type="tns:DetailsType">
+			</element>
+		</sequence>
+	</complexType>
+	<complexType name="HeaderType">
+        <annotation>
+        	<documentation>Business Object Document to represent an Order Header.</documentation>
+        </annotation>
+        <sequence>
+			<element minOccurs="1" name="OrderType" type="string" />
+			<element minOccurs="1" name="CustomerID" type="string" />
+			<element minOccurs="1" name="CustomerOrderID" type="string" />
+			<element minOccurs="0" name="LocationID" type="string" />
+			<element minOccurs="1" name="OrderDate" type="date" />
+			<element minOccurs="0" name="CompanyID" type="string" />
+			<element minOccurs="0" name="BackOrderCode" type="string" />
+			<element minOccurs="0" name="PrintCode" type="string" />
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="Communication" type="tns:CommunicationType" />
+			<element minOccurs="0" name="Shipment"
+				type="tns:ShipmentType" />
+			<element minOccurs="0" name="DistributionCenter"
+				type="string" />
+			<element minOccurs="0" name="ConsolidatedLocation"
+				type="string" />
+			<element maxOccurs="unbounded" minOccurs="0" name="Charges"
+				type="tns:ChargesType" />
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="Discounts" type="tns:DiscountType" />
+			<element minOccurs="0" name="DftCancelDate" type="date" />
+			<element minOccurs="0" name="CancelByDate" type="date" />
+			<element minOccurs="0" name="ActualCancelDate" type="date" />
+			<element minOccurs="0" name="Picker" type="tns:PickerType" />
+			<element minOccurs="0" name="PODate" type="date" />
+			<element minOccurs="0" name="Invoice"
+				type="tns:InvoiceType" />
+
+			<element minOccurs="0" name="OverrideInvoice"
+				type="tns:InvoiceType" />
+
+			<element minOccurs="0" name="POSReceiptNumber"
+				type="decimal" />
+
+			<element minOccurs="0" name="BuyingLocationID"
+				type="string" />
+
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="Commision" type="tns:CommissionType" />
+
+			<element minOccurs="0" name="PayTerms" type="string" />
+			<element minOccurs="0" name="Store" type="string" />
+			<element minOccurs="0" name="CustomerPO" type="string" />
+			<element minOccurs="0" name="UpdateInventory" type="string" />
+
+			<element minOccurs="0" name="AllowBackOrders"
+				type="boolean" />
+
+			<element minOccurs="0" name="BackOrderPriority"
+				type="string" />
+
+			<element minOccurs="0" name="ShipComplete" type="string" />
+			<element minOccurs="0" name="IsDirectShip" type="boolean" />
+			<element minOccurs="0" name="PostedDirectShip"
+				type="string" />
+
+			<element minOccurs="0" name="DeallocateInventory"
+				type="string" />
+
+			<element minOccurs="0" name="CreditInfo"
+				type="tns:CreditType" />
+
+			<element minOccurs="0" name="OrderSource" type="string" />
+			<element minOccurs="0" name="OrderWriter" type="string" />
+			<element minOccurs="0" name="SpecialInstructions"
+				type="string" />
+
+			<element minOccurs="0" name="DepositInfo"
+				type="tns:DepositType" />
+
+			<element minOccurs="0" name="InHouseAmount" type="decimal" />
+
+			<element minOccurs="0" name="IsInterestBearing"
+				type="boolean" />
+
+			<element minOccurs="0" name="ChangeDue" type="string" />
+			<element minOccurs="0" name="Payment"
+				type="tns:PaymentType" />
+
+			<element minOccurs="0" name="RouteStopID" type="int" />
+			<element minOccurs="0" name="DriverID" type="string" />
+
+			<element minOccurs="0" name="IsTaxable" type="boolean" />
+			<element maxOccurs="unbounded" minOccurs="0" name="Tax"
+				type="tns:TaxType" />
+
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="TaxPercentage" type="tns:PercentageType" />
+
+			<element minOccurs="0" name="EDIDocument"
+				type="tns:EDIDocumentType" />
+
+			<element minOccurs="0" name="MOOrderNo" type="string" />
+			<element minOccurs="0" name="MOSequenceNo" type="string" />
+			<element minOccurs="0" name="WebCustomerID" type="string" />
+			<element minOccurs="0" name="WebOrderID" type="string" />
+			<element minOccurs="0" name="RemoteOrderID" type="string" />
+			<element minOccurs="0" name="IsEntryComplete"
+				type="boolean" />
+
+			<element minOccurs="0" name="OrderEntryDate" type="date" />
+			<element minOccurs="0" name="OrderChangeDate" type="date" />
+
+			<element minOccurs="0" name="Job" type="tns:JobType" />
+			<element minOccurs="0" name="KeyCode" type="string" />
+			<element minOccurs="0" name="BillToContact"
+				type="tns:ContactType" />
+
+			<element minOccurs="0" name="BOCode" type="string" />
+			<element minOccurs="0" name="CurrencyCode" type="string" />
+			<element minOccurs="0" name="ForeignConversionFactor"
+				type="decimal" />
+
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="ForeignCurrencyCharges" type="tns:ChargesType" />
+
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="ForeignCurrencyTax" type="tns:TaxType" />
+
+			<element minOccurs="0" name="ForeignCurrencyDeposit"
+				type="tns:DepositType" />
+
+			<element minOccurs="0" name="ForeignCurrencyInvoice"
+				type="tns:InvoiceType" />
+
+			<element minOccurs="0" name="ForeignCurrencyInHouseAmt"
+				type="decimal" />
+
+			<element minOccurs="0" name="ForeignCurrencyChangeDue"
+				type="decimal" />
+
+			<element minOccurs="0" name="IsOrderSplit" type="boolean" />
+			<element minOccurs="0" name="OpportunityNumber"
+				type="decimal" />
+
+			<element minOccurs="0" name="RetailInfo"
+				type="tns:RetailType" />
+			<element minOccurs="0" name="Season" type="string" />
+			<element minOccurs="0" name="PriceGroup" type="string" />
+			<element minOccurs="0" name="PriceMatrix" type="string" />
+			<element minOccurs="0" name="AddOnFlag" type="string" />
+			<element minOccurs="0" name="IsSlingOrder" type="boolean" />
+			<element name="IsOrderHeld" type="boolean" minOccurs="0"></element>
+			<element name="IsRetail" type="boolean" minOccurs="0"></element>
+			<element name="IsSplitOrder" type="boolean" minOccurs="0"></element>
+			<element name="IsServiceBill" type="boolean"
+				minOccurs="0">
+			</element>
+            <element name="IsOriginalOrder" type="boolean" minOccurs="0"></element>
+            <element minOccurs="0" name="MODetails" type="tns:MOType" />
+			<element minOccurs="0" name="WebOrder"
+				type="tns:WebOrderType" />
+			<element name="Term" type="tns:TermType" minOccurs="0"
+				maxOccurs="unbounded">
+			</element>
+			<element name="HoldReasonCode" type="string"
+				minOccurs="0">
+			</element>
+			<element name="DiscountReasonCode" type="string"
+				minOccurs="0">
+			</element>
+			<element name="Bank" type="tns:BankType" minOccurs="0"></element>
+
+			<element name="AdvertisingSource" type="string"
+				minOccurs="0">
+			</element>
+			<element name="SortSequence" type="string" minOccurs="0"></element>
+			<element name="Price" type="tns:PriceType" minOccurs="0"></element>
+			<element maxOccurs="unbounded" name="CustomerOrderCrossReference">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" name="FullfilmentSystemCode" type="string" />
+						<element minOccurs="1" name="CustomerID" type="string" />
+						<element minOccurs="1" name="ShipToID" type="string" />
+					</sequence>
+				</complexType>
+			</element>
+			<element minOccurs="1" name="Audit" type="tns:AuditType" />
+		</sequence>
+	</complexType>
+	<complexType name="DetailsType">
+        <annotation>
+        	<documentation>Business Object Document to represent an Order Line.</documentation>
+        </annotation>
+        <sequence>
+        	<element minOccurs="1" name="OrderType" type="string" />
+        	<element minOccurs="1" name="OrderLineID" type="string" />
+        	<element minOccurs="1" name="OrderDate" type="date" />
+        	<element minOccurs="1" name="CustomerID" type="string" />
+        	<element minOccurs="1" name="CustomerOrderID"
+        		type="string">
+        	</element>
+        	<element name="CustomerItemID" type="string"
+        		minOccurs="0">
+        	</element>
+        	<element minOccurs="0" name="CompanyID" type="string" />
+        	<element minOccurs="1" name="Item" type="tns:ItemType" />
+        	<element minOccurs="1" name="Shipment"
+        		type="tns:ShipmentType">
+        	</element>
+        	<element minOccurs="0" name="BackOrderCode" type="string" />
+        	<element minOccurs="0" name="PrintCode" type="string" />
+        	<element minOccurs="0" name="PurchaseOrder"
+        		type="tns:PurchaseOrderType">
+        	</element>
+        	<element minOccurs="0" name="StoreCode" type="string" />
+        	<element minOccurs="1" name="LocationID" type="string" />
+        	<element minOccurs="0" name="OverrideInvoice"
+        		type="tns:InvoiceType">
+        	</element>
+        	<element minOccurs="0" name="BackOrderQuantity"
+        		type="tns:QuantityType">
+        	</element>
+        	<element minOccurs="0" name="OriginalOrderQuantity"
+        		type="tns:QuantityType">
+        	</element>
+        	<element minOccurs="0" name="SelectedLotQuantity"
+        		type="tns:QuantityType">
+        	</element>
+        	<element maxOccurs="unbounded" minOccurs="0" name="Charges"
+        		type="tns:ChargesType">
+        	</element>
+        	<element minOccurs="0" name="Price" type="tns:PriceType">
+        	</element>
+        	<element minOccurs="0" name="Contract"
+        		type="tns:ContractType">
+        	</element>
+        	<element maxOccurs="unbounded" minOccurs="0"
+        		name="Commision" type="tns:CommissionType">
+        	</element>
+        	<element maxOccurs="unbounded" minOccurs="0" name="Discount"
+        		type="tns:DiscountType">
+        	</element>
+        	<element minOccurs="0" name="Division" type="decimal" />
+        	<element minOccurs="0" name="InventoryClass"
+        		type="decimal">
+        	</element>
+        	<element maxOccurs="unbounded" minOccurs="0"
+        		name="InvolvedParty" type="tns:InvolvedPartyType">
+        	</element>
+        	<element minOccurs="0" name="Inventory"
+        		type="tns:InventoryType">
+        	</element>
+        	<element minOccurs="0" name="BuyerCode" type="string" />
+        	<element minOccurs="0" name="VendorCode" type="string" />
+        	<element minOccurs="0" name="isDirectShip" type="boolean" />
+        	<element minOccurs="0" name="isDirectPOCreated"
+        		type="boolean">
+        	</element>
+        	<element minOccurs="0" name="isCreatePO" type="boolean" />
+        	<element minOccurs="0" name="isLinkPOCreated"
+        		type="boolean">
+        	</element>
+        	<element minOccurs="0" name="Manufacture"
+        		type="tns:ManufactureType">
+        	</element>
+        	<element minOccurs="0" name="DrawingID" type="string" />
+        	<element minOccurs="0" name="Revision"
+        		type="tns:RevisionType">
+        	</element>
+        	<element minOccurs="0" name="Credit"
+        		type="tns:CreditType">
+        	</element>
+        	<element minOccurs="0" name="TradeInReasonCode"
+        		type="string">
+        	</element>
+        	<element minOccurs="0" name="Rental"
+        		type="tns:RentalType">
+        	</element>
+        	<element minOccurs="0" name="FutureOrderID" type="string" />
+        	<element minOccurs="0" name="StandingOrderID"
+        		type="string">
+        	</element>
+        	<element minOccurs="0" name="RemoteOrderID" type="string" />
+        	<element minOccurs="0" name="BackOrderPriority"
+        		type="string">
+        	</element>
+        	<element minOccurs="0" name="BackOrderAllocated"
+        		type="string">
+        	</element>
+        	<element minOccurs="0" name="TempBackOrderQuantity"
+        		type="decimal">
+        	</element>
+        	<element minOccurs="0" name="FillQuantity" type="decimal" />
+        	<element minOccurs="0" name="VerifyCode" type="string" />
+        	<element minOccurs="0" name="OriginalPrice"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="isGift" type="boolean" />
+        	<element minOccurs="0" name="Returns"
+        		type="tns:ItemReturnsType">
+        	</element>
+        	<element minOccurs="0" name="isRetail" type="boolean" />
+        	<element minOccurs="0" name="EDIDocument"
+        		type="tns:EDIDocumentType">
+        	</element>
+        	<element minOccurs="0" name="ContractID" type="string" />
+        	<element minOccurs="0" name="RebateAmount" type="decimal" />
+        	<element minOccurs="0" name="TaxCode" type="string" />
+        	<element minOccurs="0" name="WarrantyCode" type="string" />
+        	<element minOccurs="0" name="OriginalLocation"
+        		type="string">
+        	</element>
+        	<element minOccurs="0" name="OriginalDelivery"
+        		type="tns:ItemDeliveryType">
+        	</element>
+        	<element minOccurs="0" name="CurrentDelivery"
+        		type="tns:ItemDeliveryType">
+        	</element>
+        	<element minOccurs="0" name="UnusedRebateAmount"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="UnusedRebateCost"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="ForeignRebateAmount"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="OriginalPriceInForeignCurrency"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="CancellationDate"
+        		type="date">
+        	</element>
+        	<element minOccurs="0" name="CurrentDueDate" type="date" />
+        	<element minOccurs="0" name="Transfer"
+        		type="tns:TransferType">
+        	</element>
+        	<element minOccurs="0" name="RebateCurrentFactor"
+        		type="decimal">
+        	</element>
+        	<element minOccurs="0" name="ForeignConversionFactor"
+        		type="decimal">
+        	</element>
+        	<element name="ContractCost" type="tns:AmountType"
+        		minOccurs="0" maxOccurs="1">
+        	</element>
+        	<element minOccurs="0" name="SalesmanCost"
+        		type="tns:AmountType" />
+        	<element minOccurs="1" name="Audit" type="tns:AuditType" />
+
+        </sequence>
+	</complexType>
+	<complexType name="AddressType">
+		<sequence>
+
+            <element name="Contact" type="tns:ContactType" minOccurs="1"></element>
+            <element maxOccurs="unbounded" minOccurs="1"
+				name="AddressLine" type="string">
+			</element>
+			<element name="City" type="string" minOccurs="1"/>
+			<element name="State" type="string" minOccurs="1"/>
+			<element name="ZipCode" type="string" minOccurs="1"/>
+			<element name="CountyCode" type="string" minOccurs="0"/>
+			<element name="CountryCode" type="string" minOccurs="0"/>
+
+		</sequence>
+	</complexType>
+	<complexType name="EDIDocumentType">
+		<sequence>
+			<element minOccurs="0" name="Department" type="string" />
+			<element minOccurs="0" name="ReleaseID" type="string" />
+			<element minOccurs="0" name="POType" type="string" />
+			<element minOccurs="0" name="PromoID" type="string" />
+			<element minOccurs="0" name="OHNewStore" type="string" />
+			<element minOccurs="0" name="TransactionPurpose"
+				type="string" />
+			<element minOccurs="0" name="MailingOverride" type="string">
+			</element>
+			<element minOccurs="0" name=" TrailerID" type="string" />
+			<element minOccurs="0" name="SACCode" type="string" />
+			<element minOccurs="0" name="SACSequenceCode" type="string">
+			</element>
+			<element minOccurs="0" name="POLineID" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="ApplicationAreaType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="SourceSystem"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="TransactionID"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="CorrelationID"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="CreationDateTime"
+				type="dateTime" />
+		</sequence>
+	</complexType>
+	<complexType name="ShipmentType">
+        <annotation>
+        	<documentation>Contains the details of a shipment requested in a Customer Order.</documentation>
+        </annotation>
+        <sequence>
+			<element minOccurs="1" name="ShipToID" type="string" />
+			<element minOccurs="0" name="CarrierName" type="string" />
+            <element minOccurs="0" name="Contact" type="tns:ContactType">
+			</element>
+            <element minOccurs="1" name="Location" type="string" />
+			<element minOccurs="1" name="ShipToAddress"
+				type="tns:AddressType">
+			</element>
+			<element minOccurs="0" name="ShipDate" type="date"/>
+			<element minOccurs="0" name="RequestedShipDate" type="date">
+			</element>
+			<element minOccurs="0" name="VIACode" type="string" />
+			<element minOccurs="0" name="BillOfLadingID" type="string">
+			</element>
+			<element minOccurs="0" name="FreeOnBoardPoint" type="string">
+			</element>
+			<element minOccurs="0" name="ProNumber" type="string" />
+			<element minOccurs="0" name="TotalLines" type="decimal" />
+			<element minOccurs="1" name="TotalShipQuantity" type="decimal">
+			</element>
+			<element minOccurs="0" name="TotalShipPackage" type="decimal">
+			</element>
+			<element minOccurs="0" name="TotalCartons" type="decimal" />
+			<element minOccurs="0" name="NetOrderWeight"
+				type="decimal">
+			</element>
+			<element minOccurs="0" name="GrossWeight" type="decimal" />
+			<element minOccurs="0" name="TruckLoadID" type="string" />
+			<element minOccurs="0" name="ProofOfDelivery" type="string">
+			</element>
+			<element minOccurs="0" name="RQShipDate" type="date" />
+
+
+			<element minOccurs="0" name="OriginalRoute" type="string" />
+			<element minOccurs="0" name="Terms" type="string" />
+			<element minOccurs="0" name="CollectAccountID" type="string">
+			</element>
+			<element minOccurs="0" name="Deposit" type="tns:AmountType" />
+		</sequence>
+	</complexType>
+	<complexType name="CommunicationType">
+		<simpleContent>
+			<extension base="normalizedString">
+				<attribute name="channelCode" type="string">
+					<annotation>
+						<documentation>
+							Identifies the channel like "Phone", "EmailAddress"
+							etc.
+						</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="ChargesType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute name="type" type="string">
+					<annotation>
+						<documentation>
+							Identifies the Charge Type like "Freight",
+							"Handling", "Miscellaneous", "Restocking"
+							etc.
+						</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="currencyCode" type="string"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<simpleType name="DiscountType">
+		<restriction base="decimal" />
+	</simpleType>
+	<complexType name="PickerType">
+		<sequence>
+			<element minOccurs="0" name="Picker" type="string" />
+			<element minOccurs="0" name="PickTicketNumber" type="string" />
+			<element minOccurs="0" name="PickTicketPrintDate" type="date" />
+			<element minOccurs="0" name="PickingComplete" type="string" />
+			<element minOccurs="0" name="PickSelect" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="InvoiceType">
+		<sequence>
+			<element minOccurs="0" name="ID" type="string" />
+			<element minOccurs="0" name="Date" type="date" />
+			<element minOccurs="0" name="IsPrinted" type="boolean" />
+			<element minOccurs="0" name="InvoiceRevID" type="string" />
+			<element minOccurs="0" name="Total" type="decimal" />
+		</sequence>
+	</complexType>
+	<simpleType name="CommissionType">
+		<restriction base="decimal" />
+	</simpleType>
+	<element name="CustomerOrder" type="tns:OrderType" />
+	
+	<element name="Shipment" type="tns:ShipmentType" />
+	
+	<complexType name="CreditType">
+		<sequence>
+			<element minOccurs="1" name="Person" type="string" />
+			<element minOccurs="1" name="Cause" type="string" />
+			<element minOccurs="0" name="ReasonCode" type="string" />
+			<element minOccurs="0" name="Reason" type="string" />
+			<element name="POSReasonCode" type="string" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+	<complexType name="DepositType">
+		<sequence>
+			<element minOccurs="0" name="YTDDeposits" type="decimal" />
+			<element minOccurs="0" name="DepositLeft" type="decimal" />
+			<element minOccurs="0" name="CurrentDeposit" type="decimal">
+			</element>
+			<element minOccurs="0" name="DepositDueFlag" type="string">
+			</element>
+			<element minOccurs="0" name="DepositDue" type="decimal" />
+		</sequence>
+	</complexType>
+	<complexType name="PaymentType">
+		<sequence>
+			<element name="Type" type="string" />
+			<element minOccurs="0" name="CheckNumber" type="string" />
+			<element minOccurs="0" name="ExpirationDate" type="date" />
+			<element minOccurs="0" name="AuthorizationID" type="string">
+			</element>
+			<element minOccurs="0" name="IsAuthorized" type="string" />
+			<element minOccurs="0" name="BankCustomerID" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="PercentageType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute name="type" type="string" />
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="AuditType">
+		<sequence>
+			<element minOccurs="1" name="CreationDateTime"
+				type="dateTime">
+			</element>
+			<element minOccurs="1" name="CreatedBy" type="string" />
+			<element minOccurs="1" name="CreatedByProgram" type="string">
+			</element>
+			<element minOccurs="0" name="UpdatedDateTime" type="dateTime">
+			</element>
+			<element minOccurs="0" name="UpdatedByProgram" type="string">
+			</element>
+			<element minOccurs="0" name="UpdatedByUser" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="JobType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="ID" type="string" />
+			<element name="Name" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="ContactType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="Name"
+				type="string">
+			</element>
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="Communication" type="tns:CommunicationType" />
+		</sequence>
+	</complexType>
+	<complexType name="TaxType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute name="type" type="string" />
+				<attribute name="currencyCode" type="string" default="USD"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="RetailType">
+		<sequence>
+			<element minOccurs="0" name="ShipToState" type="string" />
+			<element minOccurs="0" name="PaidInFull" type="string" />
+			<element minOccurs="0" name="LastInChain" type="string" />
+			<element minOccurs="0" name="PickTicket" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="ItemType">
+        <annotation>
+        	<documentation>BOD to represent an Item Ordered, also includes Item Cross Reference details to other systems.</documentation>
+        </annotation>
+        <sequence>
+        	<element minOccurs="1" name="ID" type="string" />
+
+        	<element minOccurs="1" name="SKU" type="string" />
+        	<element minOccurs="1" name="UPCCode" type="string" />
+        	<element minOccurs="0" name="VendorCode" type="string" />
+        	<element minOccurs="0" name="SerialNumber" type="string" />
+        	<element maxOccurs="unbounded" minOccurs="1"
+        		name="Description" type="string">
+        	</element>
+        	<element minOccurs="1" name="UnitPrice"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="CostPrice"
+        		type="tns:AmountType">
+        	</element>
+        	<element minOccurs="0" name="BinLocation" type="string" />
+        	<element minOccurs="0" name="isTaxable" type="boolean" />
+        	<element minOccurs="0" name="ForeignUnitPrice"
+        		type="tns:AmountType">
+        	</element>
+        	<element maxOccurs="unbounded" name="ItemCrossReference">
+        		<complexType>
+        			<sequence>
+        				<element minOccurs="1"
+        					name="FulfillmentSystemCode" type="string" />
+        				<element minOccurs="1" name="ID" type="string" />
+        				<element minOccurs="0" name="Quantity"
+        					type="tns:QuantityType" />
+        			</sequence>
+        		</complexType>
+        	</element>
+        </sequence>
+	</complexType>
+	<complexType name="QuantityType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute default="CS" name="unitCode" type="string" />
+				<attribute name="ERPunitCode" type="string"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="AmountType">
+		<sequence>
+			<element minOccurs="1" name="CurrencyCode" type="string" />
+			<element minOccurs="1" name="Value" type="double" />
+		</sequence>
+	</complexType>
+	<complexType name="UOMType">
+		<simpleContent>
+			<extension base="string">
+				<attribute default="CS" name="unitCode" type="string" />
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="PurchaseOrderType">
+		<sequence>
+            <element name="ID" type="string" minOccurs="1"></element>
+            <element name="LineID" type="string" />
+
+		</sequence>
+	</complexType>
+	<complexType name="InvolvedPartyType">
+		<annotation>
+			<documentation>Business Object document to identify a Party and Role
+				Involved in the Order.
+			</documentation>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" name="ID" type="string" />
+			<element minOccurs="0" name="Name" type="string" />
+		</sequence>
+		<attribute name="role" type="string" />
+	</complexType>
+	<complexType name="PriceType">
+		<sequence>
+			<element name="Code" type="string" minOccurs="0"/>
+			<element name="Source" type="string" minOccurs="0"/>
+			<element name="ChangeReason" type="string" minOccurs="0"/>
+			<element name="UOM" type="tns:UOMType" minOccurs="0"/>
+			<element name="UOMForeign" type="tns:UOMType" minOccurs="0"/>
+			<element name="Group" type="string" minOccurs="0"></element>
+			<element name="Matrix" type="string" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+	<complexType name="ContractType">
+		<sequence>
+			<element minOccurs="1" name="ID" type="string" />
+			<element minOccurs="0" name="Price" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="InventoryType">
+		<sequence>
+			<element minOccurs="0" name="Class" type="string" />
+			<element minOccurs="0" name="Group" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="ManufactureType">
+		<sequence>
+			<element minOccurs="1" name="OrderID" type="string" />
+			<element minOccurs="1" name="OrderLineID" type="string" />
+			<element minOccurs="0" name="OrderDueDate" type="date" />
+			<element minOccurs="0" name="MakeQuantity" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="RevisionType">
+		<sequence>
+			<element minOccurs="1" name="ID" type="string" />
+			<element minOccurs="0" name="Date" type="date" />
+		</sequence>
+	</complexType>
+	<complexType name="ItemReturnsType">
+		<sequence>
+			<element minOccurs="1" name="OrderID" type="string" />
+			<element minOccurs="1" name="Quantity" type="decimal" />
+			<element minOccurs="0" name="BO" type="string" />
+			<element name="ReturnID" type="string" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+	<complexType name="RentalType">
+		<sequence>
+			<element minOccurs="1" name="ID" type="string" />
+			<element minOccurs="0" name="Line" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="ItemDeliveryType">
+		<sequence>
+			<element minOccurs="1" name="Route" type="string" />
+			<element minOccurs="0" name="Stop" type="string" />
+			<element minOccurs="0" name="Date" type="date" />
+			<element minOccurs="0" name="BatchID" type="string" />
+			<element name="DriverID" type="string" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+	<complexType name="TransferType">
+		<sequence>
+			<element minOccurs="1" name="ID" type="string" />
+			<element minOccurs="0" name="LineID" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="MOType">
+		<sequence>
+			<element minOccurs="1" name="ID" type="string" />
+			<element minOccurs="0" name="SequenceID" type="string" />
+		</sequence>
+	</complexType>
+	<complexType name="WebOrderType">
+		<sequence>
+			<element minOccurs="0" name="OrderID" type="string" />
+			<element minOccurs="1" name="CustomerID" type="string" />
+		</sequence>
+	</complexType>
+
+	<complexType name="TermType">
+
+		<simpleContent>
+			<extension base="normalizedString">
+				<attribute name="type" type="string"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+
+	<complexType name="BankType">
+		<sequence>
+			<element name="CheckNumber" type="string" minOccurs="1"></element>
+			<element name="CustomerID" type="string" minOccurs="0"></element>
+            <element name="IsAuthorized" type="boolean" minOccurs="0"></element>
+            <element name="AuthorizationID" type="string"
+				minOccurs="0">
+			</element>
+			<element name="ExpirationDate" type="date" minOccurs="0"></element>
+		</sequence>
+	</complexType>
+</schema>

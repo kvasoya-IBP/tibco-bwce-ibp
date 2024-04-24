@@ -1,0 +1,21 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef-items.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef2-items2.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef-items2.json",
+            "type": "generated"
+        }
+    ]
+}

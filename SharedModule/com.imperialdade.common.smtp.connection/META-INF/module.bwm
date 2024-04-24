@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_CIpNEBcJEe62leETDtG1yQ" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.common.smtp.connection" name="com.imperialdade.common.smtp.connection" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_FclDABcJEe62leETDtG1yQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FdPxYBcJEe62leETDtG1yQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FdWfEBcJEe62leETDtG1yQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Fddz0BcJEe62leETDtG1yQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_Fdm9wBcJEe62leETDtG1yQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FdsdUBcJEe62leETDtG1yQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_FdwHsBcJEe62leETDtG1yQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_t-wP8ByVEe60haAMWEFhjQ" name="/SMTP/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vUUUsByVEe60haAMWEFhjQ" name="/SMTP/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vXEtwByVEe60haAMWEFhjQ" name="/SMTP/Username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vZ9CoByVEe60haAMWEFhjQ" name="/SMTP/Password" type="property:password" scaext:simpleValue="#!72WDD+TkLQg8o5KYrKcBmw==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vbUUkByVEe60haAMWEFhjQ" name="/SMTP/Timeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vcwfAByVEe60haAMWEFhjQ" name="/SMTP/EnableSTARTTLS" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8tBbMByVEe60haAMWEFhjQ" name="/SMTP/KeyStoreURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__dFvEByVEe60haAMWEFhjQ" name="/SMTP/KeyStorePassword" type="property:password" scaext:simpleValue="#!cTp7juPXlzmQmBSKHUpcBw==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_60q9AByWEe60haAMWEFhjQ" name="/SMTP/KeyStoreRefreshIntervalms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+</sca:composite>

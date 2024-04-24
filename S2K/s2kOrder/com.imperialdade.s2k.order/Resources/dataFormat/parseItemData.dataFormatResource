@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:S2KItemData="http://www.example.org/S2KItemData" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Do9PUZcPEe2G9ORtdwAbqQ" name="dataFormat.parseItemData" type="dataformat:DataFormat">
+  <imports xmi:id="_iOTuYJcXEe2G9ORtdwAbqQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/S2KItemData"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Do9PUpcPEe2G9ORtdwAbqQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="S2KItemData:itemData" fieldOffsetsStr="S2kItemID(0,0)&#xA;S2kUOM(0,0)&#xA;FullfilmentERP(0,0)&#xA;ERPItemID(0,0)&#xA;ERPUOM(0,0)&#xA;ConversionFactor(0,0)">
+    <fieldOffsets xmi:id="_iPahoJcXEe2G9ORtdwAbqQ" name="S2kItemID"/>
+    <fieldOffsets xmi:id="_iPahoZcXEe2G9ORtdwAbqQ" name="S2kUOM"/>
+    <fieldOffsets xmi:id="_iPahopcXEe2G9ORtdwAbqQ" name="FullfilmentERP"/>
+    <fieldOffsets xmi:id="_iPaho5cXEe2G9ORtdwAbqQ" name="ERPItemID"/>
+    <fieldOffsets xmi:id="_iPahpJcXEe2G9ORtdwAbqQ" name="ERPUOM"/>
+    <fieldOffsets xmi:id="_iPahpZcXEe2G9ORtdwAbqQ" name="ConversionFactor"/>
+  </jndi:configuration>
+</jndi:namedResource>

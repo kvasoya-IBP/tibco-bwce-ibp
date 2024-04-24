@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1671391892787" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1671391892787">
+  <complexType name="S2KOrderElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="Order">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="Header">
+              <complexType>
+                <sequence>
+                	<element name="FulfillmentERP" type="string" maxOccurs="1" minOccurs="0"></element>
+                	<element maxOccurs="1" minOccurs="0" name="OADEL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACMP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAORD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASLOC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABOCD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACUST"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATYPE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPRNT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPICK"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAEMAL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASHIP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADSTC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACLOC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASNAM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASAD1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASAD2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASAD3"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACITY"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAST"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAMZIP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNTR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNTY"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALOC1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALOC2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACFHM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFRT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAHAND"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAMISC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARESK"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAOTOT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADSC1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADSC2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADSC3"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAORDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASHDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARQDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADDAT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACADT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACAND"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPKDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPIKR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPIKC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPSEL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPODT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPINV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINOV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINVX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARECNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAITOT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALOC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABLOC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASMN1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASMN2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACMR1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACMR2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATERM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASHTR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASTR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAOSTO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACPO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAVIA"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASCAC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAUPIN"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABKO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABKPR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASHPC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADRSH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADRPO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADEAL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACRES"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAREANO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPERS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACAUS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAHOLD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAHORD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAORDS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAORWT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASINS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAYTDD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADEPL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADEPS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABFLG"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABODD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINHO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAINBE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACHGD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPTYP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACCCK"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAEXP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAAUTH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAAUTNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABANNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAROUT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASTOP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADRIV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATXOR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATXST"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATXCN"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATXL1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATXL2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASTTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAL1TX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAL2TX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAAMTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASTPE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNPE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAL1PE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAL2PE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATTPE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAREVNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFOBP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OABOL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPRON"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAADV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASRCH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWGHT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAGWGH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALINT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAQTYT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPCKS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATCRT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADEPT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARLNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPOTY"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPROM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAOHNS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATSP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAMLOV"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATLID"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATLOAD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAMO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAMOSQ"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARORD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWCST"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWORD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAOKP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALSCH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAENTR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWSID"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAJNUM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAKEYC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPHONE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACONT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARETAIL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARECBO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACRCD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACNVF"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFFRT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFHAND"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFMISC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFRESK"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFOTOT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFITOT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFYTDD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFDEPL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFDEPS"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFBODD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFINHO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFCHGD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFSTTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFCNTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFL1TX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFL2TX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAFAMTX"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASPLIT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWMSRA"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAOPTNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARST"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPCRC"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASRBILL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACLNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="OARPAIDFUL" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="OARLASTONE" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARPICK"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OATIMEL"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPOD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OADRQDT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPORET"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARETNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAICCMP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAICPO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAVRET"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAVRETNO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASEASON"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACCTD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACCTT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAUSER"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACCTP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALCGD"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALCGT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OACUSR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OALCGP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPGRP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAPMAT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASPHONE"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OASCONT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARZIP"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OARCITY"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_OROUT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_ADDON"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_SLING"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_WSTAT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_RQOVR"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_ORGO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OA_NROUT"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OAWHO"
+                		type="string" />
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="unbounded" minOccurs="0" name="Details">
+              <complexType>
+                <sequence>
+                  <element maxOccurs="1" minOccurs="0" name="OBDEL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCMP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBORD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSLOC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBOCD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLINE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCUST" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBTYPE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPRNT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCPO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPLIN" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSTR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBORDT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSHDT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRQDT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBINVNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRECNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLOC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBITEM" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCSIT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBUPC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSKU" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBITD1" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBITD2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBITD3" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBUM" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBLOC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBQSHP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBQBKO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBQORD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLQTY" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPCOD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPRIC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPSRC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPCRC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRESK" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCONT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBITDC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBICST" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBREBT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBICS2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDIV" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCLS" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSRIT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSERNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSMNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSMN2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCOM1" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCOM2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBUPIN" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBYNTX" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBGRUP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBUYR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBVEND" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDSHP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDRPO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRPO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPSPO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMOIT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMONO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMOLN" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMODD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMOBK" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDRWNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDRWR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDRWD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRES" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPERS" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCAUS" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRECO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBTTYP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBWGHT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFUTNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSTDNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCPYNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRORD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBKPR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBKAL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBTMPB" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBQFIL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBVERF" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBOPRCE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPCSM" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRDQ" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRDO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRDB" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRETAIL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDELIVERY" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBVIA" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBGIFT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRCD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCNVF" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFPRIC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFRESK" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFREBT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFOPRCE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBBODEP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDLDEP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDLVYN" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBQSHPLAT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCNDT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCWE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCWGHT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRDL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSACCD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSACSQ" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBEPOLN" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRFLG" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBTRANS" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBTRANSL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCNTNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRVND" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRAMT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPOSTAR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPOSTAP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFRTACNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCURDUE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBDLINE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFRAMT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRCNVF" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSHIP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSNAM" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSAD1" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSAD2" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSAD3" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCITY" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBST" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBMZIP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCNTR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSEASON" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCCTD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCCTT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCCTU" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCCTP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLCGD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLCGT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBUSER" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBLCGP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCRQDT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCMCD" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBWARR" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBOLOC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBOSOV" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCUADJ" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBUUADJ" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRBCTNO" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBRBLINE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_OROUT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_OSTOP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_ODDAT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_OBATC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_CROUT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_CSTOP" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_CDDAT" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_CBATC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OB_STOPL" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCWTYPE" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPCUM" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBPRICPC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBCOSTPC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBFPRCPC" type="string"/>
+                  <element maxOccurs="1" minOccurs="0" name="OBSMNCST" type="string"/>
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="S2KOrderElement" type="tns:S2KOrderElementType"/>
+</schema>

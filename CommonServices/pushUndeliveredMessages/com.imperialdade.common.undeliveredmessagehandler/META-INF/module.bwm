@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_8dAQIKePEe2RyOl4Jj9V_Q" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.common.undeliveredmessagehandler" name="com.imperialdade.common.undeliveredmessagehandler" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_YT2JUKk_Ee2WOPQ6EBH71w" name="pickundeliveredmsgs" promote="ComponentPickUndeliveredMsgs/pickundeliveredmsgs">
+    <sca:interface.wsdl xmi:id="_YUGA8Kk_Ee2WOPQ6EBH71w" interface="http://xmlns.example.com/20230210180519PLT#wsdl.interface(pickundeliveredmsgs)" scaext:wsdlLocation="../Processes/services/PickUndeliveredMsgs.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_YUwIQKk_Ee2WOPQ6EBH71w" name="RestService" path="/undeliveredmsgs" docBasePath="http://localhost:7777/com.imperialdade.common.undeliveredmessagehandler" docResourcePath="PickUndeliveredMsgs" basePath="/" connector="com.imperialdade.common.httpconnector.connection.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/services.PickUndeliveredMsgs-PickUndeliveredMsgs.json">
+      <operation xmi:id="_YVDDMKk_Ee2WOPQ6EBH71w" operationName="post" nickname="post-pickundeliveredmsgs" httpMethod="POST" notes="postPickUndeliveredMsgs" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_YUwIQak_Ee2WOPQ6EBH71w" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_YVDDMak_Ee2WOPQ6EBH71w" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_9Pk8kKePEe2RyOl4Jj9V_Q" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9PpOAKePEe2RyOl4Jj9V_Q" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9PpOAaePEe2RyOl4Jj9V_Q" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9PpOAqePEe2RyOl4Jj9V_Q" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9PpOA6ePEe2RyOl4Jj9V_Q" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9Py_AKePEe2RyOl4Jj9V_Q" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_9Py_AaePEe2RyOl4Jj9V_Q" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_auq_QKk6Ee2WOPQ6EBH71w" name="/Configuration/JMS/FetchTimeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_YTb5oKk_Ee2WOPQ6EBH71w" name="ComponentPickUndeliveredMsgs" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_YTb5oak_Ee2WOPQ6EBH71w" processName="services.PickUndeliveredMsgs"/>
+    <sca:service xmi:id="_YTlqoKk_Ee2WOPQ6EBH71w" name="pickundeliveredmsgs">
+      <sca:interface.wsdl xmi:id="_YTwCsKk_Ee2WOPQ6EBH71w" interface="http://xmlns.example.com/20230210180519PLT#wsdl.interface(pickundeliveredmsgs)" scaext:wsdlLocation="../Processes/services/PickUndeliveredMsgs.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

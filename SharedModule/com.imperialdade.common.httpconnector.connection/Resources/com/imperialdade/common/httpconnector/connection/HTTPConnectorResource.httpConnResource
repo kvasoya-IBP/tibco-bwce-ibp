@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_WaPjkZNrEe2rTt4DQM810A" name="com.imperialdade.common.httpconnector.connection.HTTPConnectorResource" type="httpconnector:HttpConnectorConfiguration">
+  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_WaR_0JNrEe2rTt4DQM810A" newAccessLogs="true" shareAcrossApplications="true" hideErrorResponse="true">
+    <substitutionBindings xmi:id="_WaR_0ZNrEe2rTt4DQM810A" template="host" propName="/HTTPConnector/Host"/>
+    <substitutionBindings xmi:id="_UITAAJN0Ee2rTt4DQM810A" template="acceptQueueSize" propName="/HTTPConnector/AcceptQueueSize"/>
+    <substitutionBindings xmi:id="_VbUHEJN0Ee2rTt4DQM810A" template="acceptors" propName="/HTTPConnector/AcceptorThreads"/>
+    <substitutionBindings xmi:id="_XYJnMJN0Ee2rTt4DQM810A" template="minThreads" propName="/HTTPConnector/MinQTPThreads"/>
+    <substitutionBindings xmi:id="_YkmMMJN0Ee2rTt4DQM810A" template="maxThreads" propName="/HTTPConnector/MaxQTPThreads"/>
+    <substitutionBindings xmi:id="_2GI3gJYyEe2O0fQ4I5mzYA" template="port" propName="/HTTPConnector/Port"/>
+  </jndi:configuration>
+</jndi:namedResource>

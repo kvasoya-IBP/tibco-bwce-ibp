@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/S2KItemData" elementFormDefault="qualified" targetNamespace="http://www.example.org/S2KItemData">
+        
+  
+  <element name="itemData" type="tns:itemData"/>
+        
+    
+  
+  <complexType name="itemData">
+            	
+    
+    <sequence>
+                		
+      
+      <element name="S2kItemID" type="string"/>
+                		
+      
+      <element name="S2kUOM" type="string"/>
+                		
+      
+      <element name="FullfilmentERP" type="string"/>
+                		
+      
+      <element name="ERPItemID" type="string"/>
+                		
+      
+      <element name="ERPUOM" type="string"/>
+                		
+      
+      <element maxOccurs="1" minOccurs="0" name="ConversionFactor" type="string"/>
+                	
+    
+    </sequence>
+            
+  
+  </complexType>
+        
+  
+  <complexType name="itemDataArray">
+        
+    <sequence>
+          	
+      <element maxOccurs="unbounded" minOccurs="0" name="itemData" type="tns:itemData"/>
+          
+    </sequence>
+      
+  </complexType>
+        
+  
+  <element name="itemDataArray" type="tns:itemDataArray"/>
+    
+
+    
+  <element name="itemList">
+        	
+    <complexType>
+          		
+      <sequence>
+            			
+        <element maxOccurs="1" minOccurs="0" name="message" type="string">
+    			</element>
+            			
+        <element maxOccurs="unbounded" minOccurs="0" name="itemData" type="tns:itemData"/>
+            		
+      </sequence>
+          	
+    </complexType>
+  </element>
+      
+  <complexType name="itemListArray">
+    <sequence>
+      <element maxOccurs="unbounded" minOccurs="0" ref="tns:itemList"/>
+    </sequence>
+  </complexType>
+      
+  <element name="itemListArray" type="tns:itemListArray"/>
+  
+</schema>

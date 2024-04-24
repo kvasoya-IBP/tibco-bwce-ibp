@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://www.example.org/StoreProcedureSchema"
+	xmlns:tns="http://www.example.org/StoreProcedureSchema"
+	elementFormDefault="qualified">
+	<element name="data">
+		<complexType>
+			<sequence>
+				<element name="custid" type="string"></element>
+				<element name="shiptoid" type="string"></element>
+                <element name="erplocationid" type="string" minOccurs="0" maxOccurs="1"></element>
+                <element name="items">
+					<complexType>
+						<sequence>
+							<element name="id" type="string"
+								maxOccurs="unbounded" minOccurs="1">
+							</element>
+						</sequence>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+	
+
+
+    <element name="Input">
+    	<complexType>
+    		<sequence>
+    			<element ref="tns:data"></element>
+    			<element name="FulfillmentERP" type="string"></element>
+    			<element name="ReverseLookup" type="boolean" minOccurs="0" maxOccurs="1"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <element name="Output">
+    	<complexType>
+    		<sequence>
+    			<element name="Customer" minOccurs="0" maxOccurs="1">
+    				<complexType>
+    					<sequence>
+    						<element type="string" name="s2KCustID" />
+    						<element type="string" name="s2kShipTo" />
+    						<element type="string"
+    							name="fulfillmentERP" />
+    						<element type="string" name="ERPCustID" />
+    						<element type="string" name="ERPShipTo" />
+    					</sequence>
+    				</complexType>
+    			</element>
+    			<element name="Items" minOccurs="0"
+    				maxOccurs="unbounded">
+    				<complexType>
+    					<sequence>
+    						<element type="string" name="s2KItemID" />
+    						<element type="string" name="s2KUOM" />
+    						<element type="string"
+    							name="fulfillmentERP" />
+    						<element type="string" name="ERPItemID" />
+    						<element type="string" name="ERPUOM" />
+    						<element type="decimal"
+    							name="ConversionFactor" />
+    					</sequence>
+    				</complexType>
+    			</element>
+    			<element name="Warehouse" minOccurs="0" maxOccurs="1">
+    				<complexType>
+    					<sequence>
+    						<element name="s2KLocation" type="string"></element>
+    						<element name="fulfillmentERP"
+    							type="string">
+    						</element>
+    						<element name="ERPLocation" type="string"></element>
+    					</sequence>
+    				</complexType></element>
+    		</sequence>
+    	</complexType></element>
+</schema>

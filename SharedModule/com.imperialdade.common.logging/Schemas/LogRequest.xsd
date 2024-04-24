@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+	targetNamespace="http://www.tibco.com/CommonLE/namespace/Public/LogRequest"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.tibco.com/CommonLE/namespace/Public/LogRequest" xmlns:pref="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader">
+
+	<import schemaLocation="RequestHeader.xsd" namespace="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader"></import>
+	<element name="LogRequest">
+		<complexType>
+			<sequence>
+                <element ref="pref:Header"></element>
+                <element name="TimeDuration" type="int" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="Category" type="string" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="Status" type="string" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="FileSize" type="unsignedLong"
+					minOccurs="0" maxOccurs="1">
+				</element>
+				<element name="Audit" type="boolean"></element>
+			</sequence>
+		</complexType>
+	</element>
+
+	<element name="Messages">
+		<complexType>
+			<sequence>
+				<element name="Name" type="string"></element>
+				<element name="Value" type="string"></element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

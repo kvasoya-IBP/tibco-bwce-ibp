@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:JsonSchema="/T1670605294989Converted/JsonSchema" xmlns:JsonSchema_1="/T1671107650679Converted/JsonSchema" xmlns:JsonSchema_2="/T1671132204440Converted/JsonSchema" xmlns:JsonSchema_3="/T1671132587587Converted/JsonSchema" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmlns:tibprop="http://ns.tibco.com/bw/property" xmi:id="_EWZsQHfjEe29PaUT1LQREw" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.s2k.order" name="com.imperialdade.s2k.order" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_1i6r0nyuEe2ZMtj4juYDtQ" name="order" promote="Componentmain/order">
+    <sca:interface.wsdl xmi:id="_1i7S43yuEe2ZMtj4juYDtQ" interface="http://xmlns.example.com/20221215142920PLT#wsdl.interface(order)" scaext:wsdlLocation="../Processes/com/imperialdade/s2k/bw/router/main.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_1i9IEHyuEe2ZMtj4juYDtQ" name="RestService" path="/order" docBasePath="http://localhost:7777/com.imperialdade.s2k.order" docResourcePath="Order" basePath="/" connector="com.imperialdade.common.httpconnector.connection.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/S2k-Order-Mgmt.json">
+      <operation xmi:id="_1i_kUHyuEe2ZMtj4juYDtQ" operationName="post" nickname="postOrder" httpMethod="POST" notes="API to retrieve and process Order JSON file from a remote location." responseStyle="element" requestStyle="element" outputPartName="item">
+        <responseStatus xmi:id="_1jAycHyuEe2ZMtj4juYDtQ" statusCode="400" reasonPhrase="Invalid JSON File" elementQName="JsonSchema_3:Reply"/>
+        <responseStatus xmi:id="_1jBZgXyuEe2ZMtj4juYDtQ" statusCode="404" reasonPhrase="File Not Found" elementQName="JsonSchema_3:Reply"/>
+        <responseStatus xmi:id="_1jBZgnyuEe2ZMtj4juYDtQ" statusCode="405" reasonPhrase="Unsupported JSON File" elementQName="JsonSchema_3:Reply"/>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_1jBZg3yuEe2ZMtj4juYDtQ"/>
+      <import xmi:id="_1jBZgHyuEe2ZMtj4juYDtQ" importType="http://www.w3.org/2001/XMLSchema" namespace="/T1671132587587Converted/JsonSchema"/>
+      <advancedConfig xmi:id="_1i9vIHyuEe2ZMtj4juYDtQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_1i_kUXyuEe2ZMtj4juYDtQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_FIFA0HfjEe29PaUT1LQREw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIIrMHfjEe29PaUT1LQREw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIJ5UHfjEe29PaUT1LQREw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FILHcHfjEe29PaUT1LQREw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIM8oHfjEe29PaUT1LQREw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_FIPY4HfjEe29PaUT1LQREw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_FIQnAHfjEe29PaUT1LQREw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gWmpUJjtEe2B0fC7jRUfEg" name="/Configuration/OrderFileLocation/RemoteDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_UjzS4H-BEe2r_MQ81npOfA" name="/Configuration/OrderFileLocation/LocalDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_vXGaYJsZEe2xfOrhkSWjXw" name="/Configuration/OrderFileLocation/ArchiveDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_k4fGAKo5Ee2YiKq0QY9IIg" name="/Configuration/OrderFileLocation/ErrorDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nTl-IIdpEe2zGa2Unoi0DQ" name="/Configuration/Scheduler/TimeIntervalMins" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_jBsdEI2pEe2BXYcU4ZBhhg" name="/Configuration/JMS/OrderTopicDestination" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_X6Tj4LjVEe2SubuGLdMKiw" name="/Configuration/JMS/EmailNotificationTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Smm5oJjsEe2Ek5qUA_uIBw" name="/Configuration/JDBC/TimeoutSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_XwVMgJjsEe2Ek5qUA_uIBw" name="/Configuration/JDBC/MaxRows" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HAsU4KpPEe2YiKq0QY9IIg" name="/Configuration/SFTP/Timeoutms" type="XMLSchema:int" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_xhMi0HyuEe2ZMtj4juYDtQ" name="Componentmain" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_xhMi0XyuEe2ZMtj4juYDtQ" processName="services.OrderAPI"/>
+    <sca:service xmi:id="_1i6r0HyuEe2ZMtj4juYDtQ" name="order">
+      <sca:interface.wsdl xmi:id="_1i6r0XyuEe2ZMtj4juYDtQ" interface="http://xmlns.example.com/20221215142920PLT#wsdl.interface(order)" scaext:wsdlLocation="../Processes/com/imperialdade/s2k/bw/router/main.bwp"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>

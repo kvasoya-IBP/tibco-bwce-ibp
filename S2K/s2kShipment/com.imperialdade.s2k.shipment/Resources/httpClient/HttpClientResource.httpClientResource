@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://xsd.tns.tibco.com/bw/models/sharedresource/httpclient" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_sT6usMTFEe2W4deBJ0NpXg" name="httpClient.HttpClientResource" type="http:HttpClientConfiguration">
+  <jndi:configuration xsi:type="http:HttpClientConfiguration" xmi:id="_sT9K8MTFEe2W4deBJ0NpXg" httpClientVersion="httpcomponents" retryCount="3" useDefaultSSL="true" hystrixCommandName="com.imperialdade.s2k.shipment.HttpClientResource" cmdExecutionIsolationStrategy="COUNT_BASED" cmdExecutionIsolationTimeout="10" cmdExecutionIsolationInterruptOnTimeout="true" cmdExecutionIsolationSemaphoreMaxConcRequests="8" cmdCircuitBreakerRequestVolumeThreshold="50" cmdCircuitBreakerSleepWindow="100" cmdCircuitBreakerErrorThresholdPercentage="100" cmdMetricsRollingStatsTime="100" cmdMetricsRollingStatsNumBuckets="60000" cmdMetricsHealthSnapshotInterval="500" tpCoreSize="10" tpMaxQueueSize="60000" tpQueueSizeRejectionThreshold="6000" tpKeepAliveTime="1">
+    <substitutionBindings xmi:id="_uv-sAMTGEe2W4deBJ0NpXg" template="maxTotalConnections" propName="/Configuration/HTTPClient/MaxTotalConnections"/>
+    <substitutionBindings xmi:id="_wZwGMMTGEe2W4deBJ0NpXg" template="maxTotalConnectionsPerHost" propName="/Configuration/HTTPClient/MaxTotalConnectionsPerHost"/>
+    <substitutionBindings xmi:id="_zQr3EMTGEe2W4deBJ0NpXg" template="idleConnectionTimeout" propName="/Configuration/HTTPClient/Port"/>
+    <tcpDetails xmi:id="_sT9K8cTFEe2W4deBJ0NpXg">
+      <substitutionBindings xmi:id="_neuE4MTGEe2W4deBJ0NpXg" template="host" propName="/Configuration/HTTPClient/Host"/>
+      <substitutionBindings xmi:id="_qbAP0MTGEe2W4deBJ0NpXg" template="port" propName="/Configuration/HTTPClient/Port"/>
+      <substitutionBindings xmi:id="_2RJWkMT2Ee24mb3oNSgIpw" template="staleCheck" propName="/Configuration/HTTPClient/StaleCheck"/>
+    </tcpDetails>
+  </jndi:configuration>
+</jndi:namedResource>

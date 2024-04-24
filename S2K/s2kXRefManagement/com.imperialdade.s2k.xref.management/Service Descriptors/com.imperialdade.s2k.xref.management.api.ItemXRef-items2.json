@@ -1,0 +1,112 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "items2",
+    "description" : "items service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/items2" : {
+      "get" : {
+        "summary" : "getItems2",
+        "description" : "getItems2",
+        "operationId" : "get-items2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "S2kItemID",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        }, {
+          "name" : "FullfilmentERP",
+          "in" : "query",
+          "description" : "",
+          "type" : "string",
+          "required" : false
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a itemList to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/itemList"
+            }
+          }
+        }
+      },
+      "put" : {
+        "summary" : "putItems2",
+        "description" : "putItems2",
+        "operationId" : "put-items2",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "type" : "array",
+            "items" : {
+              "$ref" : "#/definitions/itemData",
+              "uniqueItems" : false
+            }
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a itemList to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/itemList"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "itemData" : {
+      "type" : "object",
+      "required" : [ "S2kItemID", "S2kUOM", "FullfilmentERP", "ERPUOM", "ERPItemID" ],
+      "properties" : {
+        "S2kItemID" : {
+          "type" : "string"
+        },
+        "S2kUOM" : {
+          "type" : "string"
+        },
+        "FullfilmentERP" : {
+          "type" : "string"
+        },
+        "ERPItemID" : {
+          "type" : "string"
+        },
+        "ERPUOM" : {
+          "type" : "string"
+        },
+        "ConversionFactor" : {
+          "type" : "string"
+        }
+      }
+    },
+    "itemList" : {
+      "type" : "object",
+      "properties" : {
+        "message" : {
+          "type" : "string"
+        },
+        "itemData" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/itemData",
+            "uniqueItems" : false
+          }
+        }
+      }
+    }
+  }
+}

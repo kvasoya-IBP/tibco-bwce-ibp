@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	targetNamespace="http://com.imperialdade/schema/canonical/common-types/v1"
+	xmlns:tns="http://com.imperialdade/schema/canonical/common-types/v1"
+	elementFormDefault="qualified">
+	<complexType name="ApplicationAreaType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="SourceSystem"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="TransactionID"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="CorrelationID"
+				type="string" />
+			<element maxOccurs="1" minOccurs="1" name="CreationDateTime"
+				type="dateTime" />
+		</sequence>
+	</complexType>
+	<complexType name="QuantityType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute default="CS" name="unitCode" type="string" />
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="AmountType">
+		<sequence>
+			<element minOccurs="1" name="CurrencyCode" type="string"
+				default="USD" />
+			<element minOccurs="1" name="Value" type="decimal" />
+		</sequence>
+	</complexType>
+	<complexType name="ContactType">
+		<sequence>
+			<element maxOccurs="1" minOccurs="1" name="Name"
+				type="string">
+			</element>
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="Communication" type="tns:CommunicationType" />
+		</sequence>
+	</complexType>
+	<complexType name="CommunicationType">
+		<simpleContent>
+			<extension base="normalizedString">
+				<attribute name="channelCode" type="string">
+					<annotation>
+						<documentation>
+							Identifies the channel like "Phone", "EmailAddress"
+							etc.
+						</documentation>
+					</annotation>
+				</attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="ChargesType">
+		<simpleContent>
+			<extension base="decimal">
+				<attribute name="type" type="string">
+					<annotation>
+						<documentation>
+							Identifies the Charge Type like "Freight",
+							"Handling", "Miscellaneous", "Restocking"
+							etc.
+						</documentation>
+					</annotation>
+				</attribute>
+				<attribute name="currencyCode" type="string"></attribute>
+			</extension>
+		</simpleContent>
+	</complexType>
+	<complexType name="AddressType">
+		<sequence>
+
+			<element name="Contact" type="tns:ContactType" minOccurs="1"></element>
+			<element maxOccurs="unbounded" minOccurs="1"
+				name="AddressLine" type="string">
+			</element>
+			<element name="City" type="string" minOccurs="1" />
+			<element name="State" type="string" minOccurs="1" />
+			<element name="ZipCode" type="string" minOccurs="1" />
+			<element name="CountyCode" type="string" minOccurs="0" />
+			<element name="CountryCode" type="string" minOccurs="0" />
+		</sequence>
+	</complexType>
+	<complexType name="InvolvedPartyType">
+		<annotation>
+			<documentation>Business Object document to identify a Party and Role
+				Involved in the Shipment.
+			</documentation>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" name="ID" type="string" />
+			<element minOccurs="0" name="Name" type="string" />
+		</sequence>
+		<attribute name="role" type="string" />
+	</complexType>
+	
+</schema>

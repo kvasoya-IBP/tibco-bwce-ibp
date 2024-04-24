@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_N8EMcJNiEe2rTt4DQM810A" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.common.httpconnector.connection" name="com.imperialdade.common.httpconnector.connection" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_OJpVcJNiEe2rTt4DQM810A" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OKIdoJNiEe2rTt4DQM810A" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OKRnkJNiEe2rTt4DQM810A" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OKaxgJNiEe2rTt4DQM810A" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OKd00JNiEe2rTt4DQM810A" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_OKmXsJNiEe2rTt4DQM810A" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_OKr3QJNiEe2rTt4DQM810A" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ZqpNYJbZEe2EIeEKv3d8Ug" name="/HTTPConnector/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_ZwmrcJbZEe2EIeEKv3d8Ug" name="/HTTPConnector/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8P19IJNzEe2rTt4DQM810A" name="/HTTPConnector/AcceptQueueSize" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_8RYOMJNzEe2rTt4DQM810A" name="/HTTPConnector/AcceptorThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Ijwl0JN0Ee2rTt4DQM810A" name="/HTTPConnector/MinQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Im4LQJN0Ee2rTt4DQM810A" name="/HTTPConnector/MaxQTPThreads" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+</sca:composite>

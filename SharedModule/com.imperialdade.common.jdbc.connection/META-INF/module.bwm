@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_8Fvb8KAWEe2C2aXBn4bJEg" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.common.jdbc.connection" name="com.imperialdade.common.jdbc.connection" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_9ssysKAWEe2C2aXBn4bJEg" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9tBi0KAWEe2C2aXBn4bJEg" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9tGbUKAWEe2C2aXBn4bJEg" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9tI3kKAWEe2C2aXBn4bJEg" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9tLT0KAWEe2C2aXBn4bJEg" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_9tOXIKAWEe2C2aXBn4bJEg" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_9tPlQKAWEe2C2aXBn4bJEg" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_F5tQYKAXEe2C2aXBn4bJEg" name="/Database/JDBCURL" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IeJjEKAXEe2C2aXBn4bJEg" name="/Database/Username" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_If1lIKAXEe2C2aXBn4bJEg" name="/Database/Password" type="property:password" scaext:simpleValue="#!iz5rUl3f098XSIDKl7U+Nw==" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IhH-kKAXEe2C2aXBn4bJEg" name="/Database/MaximumConnections" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IihswKAXEe2C2aXBn4bJEg" name="/Database/ConnectionIdleTimeoutSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_NhFRcKAXEe2C2aXBn4bJEg" name="/Database/LoginTimeoutSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_yusCoKeNEe2RyOl4Jj9V_Q" name="/Configuration/JDBC/ActivityTimeoutInSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5zaCkKeNEe2RyOl4Jj9V_Q" name="/Configuration/JDBC/MaxRows" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+</sca:composite>

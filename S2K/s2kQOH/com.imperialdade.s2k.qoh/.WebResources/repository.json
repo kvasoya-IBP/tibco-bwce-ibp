@@ -1,0 +1,17 @@
+{
+    "records": [{
+        "name": "Cloud",
+        "items": [],
+        "url": "https://integration.cloud.tibco.com:443"
+    }],
+    "resources": [
+        {
+            "location": "Service Descriptors/services.qoh-qoh.json",
+            "type": "generated"
+        },
+        {
+            "location": "Service Descriptors/services.getQoh-getQoh.json",
+            "type": "generated"
+        }
+    ]
+}

@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://com.imperialdade/schema/canonical/shipment/v1"
+	xmlns:tns1="http://com.imperialdade/schema/canonical/common-types/v1"
+	elementFormDefault="qualified"
+	targetNamespace="http://com.imperialdade/schema/canonical/shipment/v1">
+	<import namespace="http://com.imperialdade/schema/canonical/common-types/v1" schemaLocation="Common-Types.xsd" />
+	<complexType name="ShipmentType">
+		<sequence>
+			<element minOccurs="1" name="ApplicationArea"
+				type="tns1:ApplicationAreaType" />
+			<element maxOccurs="1" minOccurs="1" name="Header"
+				type="tns:ShipmentHeaderType">
+			</element>
+			<element maxOccurs="unbounded" minOccurs="1" name="Details"
+				type="tns:ShipmentDetailsType">
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ShipmentHeaderType">
+		<annotation>
+			<documentation>Represents Canonical shipment header type
+			</documentation>
+		</annotation>
+		<sequence>
+			<element name="EDITransaction" type="string" minOccurs="0" maxOccurs="1"></element>
+			<element minOccurs="1" name="ShipToID" type="string" />
+			<element minOccurs="0" name="CustomerID" type="string" />
+			<element minOccurs="0" name="CompanyID" type="string" />
+			<element minOccurs="0" name="OrderType" type="string" />
+			<element minOccurs="0" name="OrderID" type="string" />
+			<element name="LegacyOrderID" type="string" minOccurs="0"
+				maxOccurs="1" />
+			<element minOccurs="0" name="OrderGenerationID"
+				type="string" />
+			<element minOccurs="0" name="OrderReferenceID"
+				type="string" />
+			<element minOccurs="0" name="OrderEntryDate" type="date" />
+			<element minOccurs="0" name="AcknowledgementPrintDate"
+				type="date" />
+			<element minOccurs="0" name="PickSlipPrintDate" type="date" />
+			<element minOccurs="0" name="ReqShipDate" type="date" />
+			<element minOccurs="0" name="ConfirmedShipDate" type="date" />
+			<element minOccurs="0" name="QuoteReviewDate" type="date" />
+			<element minOccurs="0" name="InvoiceNumber" type="string" />
+			<element minOccurs="0" name="InvoiceDate" type="date" />
+			<element minOccurs="0" name="InvoicePrintDate" type="date" />
+			<element minOccurs="0" name="DueDate" type="date" />
+			<element minOccurs="0" name="NetDate" type="date" />
+			<element minOccurs="0" name="FutureDate" type="date" />
+			<element minOccurs="0" name="Route" type="string" />
+			<element minOccurs="0" name="Stop" type="string" />
+			<element minOccurs="0" name="CompleteShipCode"
+				type="string" />
+			<element minOccurs="0" name="BackOrderCode" type="string" />
+			<element minOccurs="0" name="IsPrintAcknowledgements"
+				type="boolean" />
+			<element minOccurs="0" name="CustomerPO" type="string" />
+			<element minOccurs="0" name="ShippingInstructions"
+				type="string" />
+			<element minOccurs="0" name="CreditCardAuthorization"
+				type="string" />
+			<element minOccurs="0" name="MiscellaneousNote"
+				type="string" />
+			<element minOccurs="0" name="PaymentTypeCode" type="string" />
+			<element minOccurs="0" name="CreditCardNumber"
+				type="string" />
+			<element minOccurs="0" name="OrderExpirationDate"
+				type="date" />
+			<element minOccurs="0" name="CashDiscountPercentage"
+				type="double" />
+			<element minOccurs="0" name="CashDiscountAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ARTermsCode" type="string" />
+			<element minOccurs="0" name="ContractID" type="string" />
+			<element minOccurs="0" name="CustomerPriceList"
+				type="string" />
+			<element minOccurs="0" name="PriceDiscountCode"
+				type="string" />
+			<element minOccurs="0" name="OverridePriceDiscountPercent"
+				type="double" />
+			<element minOccurs="0" name="TradeDiscountPercent"
+				type="double" />
+			<element minOccurs="0" name="WarehouseID" type="string" />
+			<element minOccurs="0" name="AllocatedCode" type="string" />
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="InvolvedParty" type="tns1:InvolvedPartyType">
+			</element>
+			<element minOccurs="0" name="HoldCode" type="string" />
+			<element minOccurs="0" name="LastHoldCode" type="string" />
+			<element minOccurs="0" name="PriorHoldCode" type="string" />
+			<element minOccurs="0" name="LastUserID" type="string" />
+
+			<element minOccurs="0" name="NOofItems" type="double" />
+			<element minOccurs="0" name="NOofSpecialCharges"
+				type="double" />
+			<element minOccurs="0" name="NOofMessages" type="string" />
+			<element minOccurs="0" name="ItemSalesAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TotalFreightCharges"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TotalSpecialCharges"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TradeDiscountAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="SalesTaxAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="FederalExciseAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TotalContainerCharge"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="InvoiceAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TaxBody" type="string" />
+			<element minOccurs="0" name="SalesTaxPercentage"
+				type="double" />
+			<element minOccurs="0" name="ExemptCode" type="string" />
+			<element minOccurs="0" name="FederalExciseTaxCode"
+				type="string" />
+			<element minOccurs="0" name="AmountSubjecttoTax"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ItemExemptAmount"
+				type="decimal" />
+			<element minOccurs="0" name="DropShipAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="DepositAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0"
+				name="AccountsReceivableCustomerAmount" type="tns1:AmountType" />
+			<element minOccurs="0" name="AmountTendered"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="TotalOrderValue" type="double" />
+			<element minOccurs="0" name="GLCostExtendedShipped"
+				type="integer" />
+			<element minOccurs="0" name="NewOrderCode" type="string" />
+			<element minOccurs="0" name="DropShipCode" type="string" />
+			<element minOccurs="0" name="OrderSource" type="string" />
+			<element minOccurs="0" name="CustomerGLCode" type="string" />
+			<element minOccurs="0" name="ReturntoStock" type="string" />
+			<element minOccurs="0" name="Territory" type="string" />
+			<element minOccurs="0" name="CustomerClass" type="string" />
+			<element minOccurs="0" name="CustomerSubclass"
+				type="string" />
+			<element minOccurs="0" name="AccountsReceivableCustomerID"
+				type="string" />
+			<element minOccurs="0" name="ShippedOrderWeight"
+				type="double" />
+			<element minOccurs="0" name="UpdateAR" type="string" />
+			<element minOccurs="0" name="CustomerSortWord"
+				type="string" />
+			<element minOccurs="0" name="CharacterUserArea"
+				type="string" />
+			<element minOccurs="0" name="CharacterFillerField"
+				type="string" />
+			<element minOccurs="0" name="ParentOrderID" type="string" />
+			<element minOccurs="0" name="TotalCubesShipped"
+				type="double" />
+			<element minOccurs="0" name="UpdateDemand" type="string" />
+			<element minOccurs="0" name="CarrierCode" type="string" />
+			<element minOccurs="0" name="PrintInvoices" type="string" />
+			<element minOccurs="0" name="IsEDIOrder" type="boolean" />
+			<element minOccurs="0" name="EDIDocument"
+				type="tns:EDIDocumentType" />
+
+			<element minOccurs="0" name="IsFaxInvoices" type="boolean" />
+			<element minOccurs="0" name="IsFaxAcknowledgements"
+				type="boolean" />
+			<element minOccurs="0" name="NickName" type="string" />
+			<element minOccurs="0" name="CancelDate" type="date" />
+			<element minOccurs="0" name="ShipToGeoCode" type="string" />
+			<element minOccurs="0" name="IsGST" type="boolean" />
+			<element minOccurs="0" name="GSTTaxPercentage"
+				type="string" />
+			<element minOccurs="0" name="GSTAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="IsPSTCompounded"
+				type="boolean" />
+			<element minOccurs="0" name="PSTTaxPercentage"
+				type="double" />
+			<element minOccurs="0" name="PSTAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ConsolidatedBillCode"
+				type="string" />
+			<element minOccurs="0" name="ConsolidatedInvControlID"
+				type="string" />
+			<element minOccurs="0" name="ConsolidatedInvPrtFlag"
+				type="string" />
+			<element minOccurs="0" name="CustomerContractCode"
+				type="string" />
+			<element minOccurs="0" name="AllocationDate" type="date" />
+			<element minOccurs="0" name="ManualReleasedFutureOrder"
+				type="string" />
+			<element minOccurs="0" name="EntryTime" type="string" />
+			<element minOccurs="0" name="EntryUser" type="string" />
+			<element minOccurs="0" name="AcknowledgePrintTime"
+				type="string" />
+			<element minOccurs="0" name="AcknowledgePrintUser"
+				type="string" />
+			<element minOccurs="0" name="PickSlipPrintTime"
+				type="string" />
+			<element minOccurs="0" name="PickSlipPrintUser"
+				type="string" />
+			<element minOccurs="0" name="ShipConfirmTime" type="string" />
+			<element minOccurs="0" name="ShipConfirmUser" type="string" />
+			<element minOccurs="0" name="InvoicePrintTime"
+				type="string" />
+			<element minOccurs="0" name="InvoicePrintUser"
+				type="string" />
+
+			<element minOccurs="0" name="PackerID" type="string" />
+			<element minOccurs="0" name="PickerID" type="string" />
+			<element minOccurs="0" name="DriverID" type="string" />
+			<element minOccurs="0" name="FOBCode" type="string" />
+			<element minOccurs="0" name="TaxExemptCertificateID"
+				type="string" />
+			<element minOccurs="0" name="ExpirationDate" type="date" />
+			<element minOccurs="0" name="ProductNumber" type="string" />
+			<element minOccurs="0" name="BillofLadingNumber"
+				type="string" />
+			<element minOccurs="0" name="AllItemsBackOrderedFlag"
+				type="string" />
+			<element minOccurs="0" name="DaysinProcessDateTime"
+				type="dateTime" />
+			<element minOccurs="0" name="DayendDate" type="date" />
+			<element minOccurs="0" name="Department" type="string" />
+			<element minOccurs="0" name="InternalVendorID"
+				type="string" />
+			<element minOccurs="0" name="IsEmailInvoices"
+				type="boolean" />
+			<element minOccurs="0" name="IsEmailAcknowledgements"
+				type="boolean" />
+			<element minOccurs="0" name="EntryDate" type="date" />
+			<element minOccurs="0" name="ConsignmentOrderType"
+				type="string" />
+			<element minOccurs="0" name="UseOrigTacPercentage"
+				type="double" />
+			<element minOccurs="0" name="MarketSource" type="string" />
+			<element minOccurs="0" name="Keycode" type="string" />
+			<element minOccurs="0" name="IncotermsCode" type="string" />
+			<element minOccurs="0" name="IncotermsNamedPlace"
+				type="string" />
+			<element minOccurs="0" name="ExemptedofVATReasonCode"
+				type="string" />
+			<element minOccurs="0" name="ExemptofVATArticleID"
+				type="string" />
+			<element minOccurs="0" name="TaxPercentage" type="decimal" />
+			<element minOccurs="0" name="TaxType" type="string" />
+			<element minOccurs="0" name="OrderedContainerCharge"
+				type="double" />
+			<element minOccurs="0" name="OrderedFederalExciseAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderedTradeDiscountAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderedItemSalesAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderedTaxAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderAmounttSubjectToTax"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderItemExemptAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ShippedTaxAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ShippedAmountSubjectToTax"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="IsCreditandRebill"
+				type="boolean" />
+			<element minOccurs="0" name="IsPromotionsUsed"
+				type="boolean" />
+			<element minOccurs="0" name="ExpectedShipDate" type="date" />
+			<element minOccurs="0" name="OriginalRequestedShipDate"
+				type="date" />
+			<element minOccurs="0" name="OECostExtendedShipped"
+				type="string" />
+			<element minOccurs="0" name="OECostExtendedOrdered"
+				type="string" />
+			<element minOccurs="0" name="BillToContactId" type="string" />
+			<element minOccurs="0" name="ShipToContactId" type="string" />
+			<element minOccurs="0" name="County" type="string" />
+			<element minOccurs="0" name="IsFaxPackLists" type="boolean" />
+			<element minOccurs="0" name="IsEmailPackLists"
+				type="boolean" />
+			<element minOccurs="0" name="Contact"
+				type="tns1:ContactType">
+			</element>
+			<element minOccurs="0" name="Location" type="string" />
+			<element minOccurs="0" name="ShipToAddress"
+				type="tns1:AddressType">
+			</element>
+			<element minOccurs="0" name="ShipDate" type="date" />
+			<element minOccurs="0" name="RequestedShipDate"
+				type="date">
+			</element>
+			<element minOccurs="0" name="VIACode" type="string" />
+			<element minOccurs="0" name="BillOfLadingID"
+				type="string">
+			</element>
+			<element minOccurs="0" name="FreeOnBoardPoint"
+				type="string">
+			</element>
+			<element minOccurs="0" name="ProNumber" type="string" />
+			<element minOccurs="0" name="TotalLines" type="double" />
+			<element minOccurs="0" name="TotalShipQuantity"
+				type="tns1:QuantityType">
+			</element>
+			<element minOccurs="0" name="TotalShipPackage"
+				type="double">
+			</element>
+			<element minOccurs="0" name="TotalCartons" type="double" />
+			<element minOccurs="0" name="NetOrderWeight"
+				type="double">
+			</element>
+			<element minOccurs="0" name="GrossWeight" type="double" />
+			<element minOccurs="0" name="TruckLoadID" type="string" />
+			<element minOccurs="0" name="ProofOfDelivery"
+				type="string">
+			</element>
+			<element minOccurs="0" name="RQShipDate" type="date" />
+			<element minOccurs="0" name="OriginalRoute" type="string" />
+			<element minOccurs="0" name="Terms" type="string" />
+			<element minOccurs="0" name="CollectAccountID"
+				type="string">
+			</element>
+			<element minOccurs="0" name="Deposit"
+				type="tns1:AmountType" />
+			<element maxOccurs="unbounded"
+				name="CustomerOrderCrossReference">
+				<complexType>
+					<sequence>
+						<element minOccurs="1"
+							name="FullfilmentSystemCode" type="string" />
+						<element minOccurs="1" name="CustomerID"
+							type="string" />
+						<element minOccurs="1" name="ShipToID"
+							type="string" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ItemType">
+		<annotation>
+			<documentation>BOD to represent an Shipment Item</documentation>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" name="ID" type="string" />
+			<element minOccurs="0" name="ItemContractCode" type="string" />
+			<element maxOccurs="unbounded" name="Description"
+				type="string" />
+			<element minOccurs="0" name="Class" type="string" />
+			<element minOccurs="0" name="SubClass" type="string" />
+			<element minOccurs="0" name="DescriptionPrintCode" type="string" />
+			<element minOccurs="0" name="GLCode" type="string" />
+			<element minOccurs="0" name="Category" type="string" />
+			<element maxOccurs="unbounded" name="ItemCrossReference">
+				<complexType>
+					<sequence>
+						<element minOccurs="1" name="FulfillmentSystemCode"
+							type="string" />
+						<element minOccurs="1" name="ID" type="string" />
+						<element minOccurs="0" name="Quantity" type="tns1:QuantityType" />
+					</sequence>
+				</complexType>
+			</element>
+		</sequence>
+	</complexType>
+
+	<complexType name="ShipmentDetailsType">
+		<annotation>
+			<documentation>Represents Canonical shipment details type
+			</documentation>
+		</annotation>
+		<sequence>
+			<element minOccurs="0" name="CompanyID" type="string" />
+			<element minOccurs="0" name="CustomerID" type="string" />
+			<element minOccurs="0" name="OrderID" type="string" />
+			<element minOccurs="0" name="OrderGenerationID" type="string" />
+			<element minOccurs="0" name="HistorySequenceID" type="string" />
+			<element minOccurs="0" name="OrderSequenceID" type="string" />
+			<element minOccurs="0" name="LineItemType" type="string" />
+			<element minOccurs="0" name="ShipmentID" type="string" />
+			<element maxOccurs="unbounded" minOccurs="0"
+				name="InvolvedParty" type="tns1:InvolvedPartyType">
+			</element>
+			<element minOccurs="0" name="WarehouseID" type="string" />
+			<element minOccurs="0" name="OrderType" type="string" />
+			<element minOccurs="0" name="PriceList" type="string" />
+			<element minOccurs="0" name="OrderHoldCode" type="string" />
+			<element minOccurs="0" name="RequestDate" type="date" />
+			<element minOccurs="0" name="LotCode" type="string" />
+			<element minOccurs="1" name="Item" type="tns:ItemType" />
+
+			<element minOccurs="0" name="QuantityOrdered" type="tns1:QuantityType" />
+			<element minOccurs="0" name="QuantityShipped" type="tns1:QuantityType" />
+			<element minOccurs="0" name="QuantityBackordered" type="tns1:QuantityType" />
+			
+			<element minOccurs="0" name="NonStockCode" type="string" />
+			<element minOccurs="0" name="ListPrice" type="tns1:AmountType" />
+			<element minOccurs="0" name="ItemDiscountPercent"
+				type="string" />
+			<element minOccurs="0" name="FinalPriceOverrideCode"
+				type="string" />
+			<element minOccurs="0" name="QtyDscType" type="string" />
+			<element minOccurs="0" name="CharacterFillerField"
+				type="string" />
+			<element minOccurs="0" name="AdditionalDiscountPercent"
+				type="string" />
+			<element minOccurs="0" name="ActualSellPrice" type="tns1:AmountType" />
+			<element minOccurs="0" name="TotalLineAmount" type="tns1:AmountType" />
+			<element minOccurs="0" name="LotChargeCode" type="string" />
+			<element minOccurs="0" name="SystemTotalLineAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="PricingUM" type="string" />
+			<element minOccurs="0" name="TaxableCode" type="string" />
+			<element minOccurs="0" name="TaxExemptCode" type="string" />
+			<element minOccurs="0" name="ContainerCharge" type="string" />
+			<element minOccurs="0" name="FederalExciseTaxAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="AllowCashDiscountCode"
+				type="string" />
+			<element minOccurs="0" name="WarehouseLocation" type="string" />
+			<element minOccurs="0" name="GLCost" type="double" />
+			<element minOccurs="0" name="PurchaseOrderID" type="string" />
+			<element minOccurs="0" name="AllocatedCode" type="string" />
+			<element minOccurs="0" name="LineValue" type="string" />
+			<element minOccurs="0" name="GLCostOverrideCode"
+				type="string" />
+			<element minOccurs="0" name="GLCostExtendedShipped"
+				type="string" />
+
+			<element minOccurs="0" name="UnitWeight" type="decimal" />
+			<element minOccurs="0" name="ExtendedWeight" type="decimal" />
+			<element minOccurs="0" name="DropShipCode" type="string" />
+			<element minOccurs="0" name="ReUsableCode" type="string" />
+			<element minOccurs="0" name="KitBuildQuantity" type="string" />
+			<element minOccurs="0" name="GeneralLedgerAccountID"
+				type="string" />
+			<element minOccurs="0" name="QuantityBreakClass"
+				type="string" />
+			<element minOccurs="0" name="DiscountMarkupCode"
+				type="string" />
+			<element minOccurs="0" name="OrderEntrySequence"
+				type="string" />
+			<element minOccurs="0" name="InvoiceDate" type="date" />
+			<element minOccurs="0" name="PriceClass" type="string" />
+			<element minOccurs="0" name="ContractCode" type="string" />
+			<element minOccurs="0" name="CustomerSortWord" type="string" />
+			<element minOccurs="0" name="ItemQuantityDiscount"
+				type="double" />
+			<element minOccurs="0" name="UserArea" type="string" />
+			<element minOccurs="0" name="BillofMaterialsCode"
+				type="string" />
+			<element minOccurs="0" name="SpecialOrderSequence"
+				type="string" />
+			<element minOccurs="0" name="InsertInProgressFlag"
+				type="string" />
+			<element minOccurs="0" name="AssignedComplete" type="string" />
+			<element minOccurs="0" name="WHMgmtCode" type="string" />
+			<element minOccurs="0" name="ParentOrderNumber" type="string" />
+			<element minOccurs="0" name="EntrySequenceNumber"
+				type="string" />
+			<element minOccurs="0" name="OriginalQuantity" type="string" />
+			<element minOccurs="0" name="OriginalItemID" type="string" />
+			<element minOccurs="0" name="ReplacementReasonCode"
+				type="string" />
+			<element minOccurs="0" name="OriginalWarehouse" type="string" />
+			<element minOccurs="0" name="ReturnReasonCode" type="string" />
+			<element minOccurs="0" name="InvoicePrintSequence"
+				type="string" />
+			<element minOccurs="0" name="ProductRestrictionCode"
+				type="string" />
+			<element minOccurs="0" name="CommissionCost" type="string" />
+			<element minOccurs="0" name="RebateId" type="string" />
+			<element minOccurs="0" name="InventoryCost" type="double" />
+			<element minOccurs="0" name="RebateVendorID" type="string" />
+			<element minOccurs="0" name="IsRebatePending" type="boolean" />
+			<element minOccurs="0" name="CustomerOrderUM" type="string" />
+			<element minOccurs="0" name="DocumentID" type="string" />
+			<element minOccurs="0" name="EDILineReferenceID"
+				type="string" />
+			<element minOccurs="0" name="CustomerOrderQuantity"
+				type="string" />
+			<element minOccurs="0" name="CustomerPricing" type="string" />
+			<element minOccurs="0" name="OriginalParOrderID"
+				type="string" />
+			<element minOccurs="0" name="OriginalEntrySequenceNumber"
+				type="string" />
+			<element minOccurs="0" name="LineItemTaxAmount" type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderTaxAmount" type="tns1:AmountType" />
+			<element minOccurs="0" name="ConsolidatedBillCode"
+				type="string" />
+			<element minOccurs="0" name="ConsolidatedInvControlID"
+				type="string" />
+			<element minOccurs="0" name="ConsolidatedInvPrtFlag"
+				type="string" />
+			<element minOccurs="0" name="InventoryPostedFlag"
+				type="string" />
+			<element minOccurs="0" name="ReturntoVendorLogID"
+				type="string" />
+			<element minOccurs="0" name="DaysinProcessType" type="string" />
+			<element minOccurs="0" name="OriginalOrderGeneration"
+				type="string" />
+			<element minOccurs="0" name="POdetailupdatecostflag"
+				type="string" />
+			<element minOccurs="0" name="ConsignmentOrderType"
+				type="string" />
+			<element minOccurs="0" name="QuantityInvoiced" type="double" />
+			<element minOccurs="0" name="ReturnTaxDate" type="date" />
+			<element minOccurs="0" name="BestPricePriceSrc" type="string" />
+			<element minOccurs="0" name="PriceSource" type="string" />
+			<element minOccurs="0" name="ContractNumber" type="string" />
+			<element minOccurs="0" name="ReturntoStock" type="string" />
+			<element minOccurs="0" name="MarketSource" type="string" />
+			<element minOccurs="0" name="Keycode" type="string" />
+			<element minOccurs="0" name="CharacterUserArea" type="string" />
+			<element minOccurs="0" name="UpdateDemand" type="string" />
+			<element minOccurs="0" name="CountryofOrigin" type="string" />
+			<element minOccurs="0" name="RebateCostBasis" type="string" />
+			<element minOccurs="0" name="RebateBypass" type="string" />
+			<element minOccurs="0" name="RebateReferenceID"
+				type="string" />
+			<element minOccurs="0" name="AllowTradeDiscountCode"
+				type="string" />
+			<element minOccurs="0" name="CommissionPercentage"
+				type="string" />
+				
+			<element minOccurs="0" name="TaxPercentage"
+				type="string" />
+
+			<element minOccurs="0" name="TaxOverride"
+				type="string" />
+
+			<element minOccurs="0" name="TaxType" type="string" />
+
+			<element minOccurs="0" name="OrderedContainerCharge"
+				type="string" />
+			<element minOccurs="0" name="OrderedFederalExciseAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="OrderedTradeDiscountAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0"
+				name="OrderedAmountSubjectToTax" type="tns1:AmountType" />
+
+			<element minOccurs="0" name="OrderedTaxAmount"
+				type="tns1:AmountType" />
+
+			<element minOccurs="0" name="ShippedContainerCharge"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ShippedFederalExciseAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ShippedTradeDiscountAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0"
+				name="ShippedAmountSubjectToTax" type="tns1:AmountType" />
+
+			<element minOccurs="0" name="ShippedTaxAmount"
+				type="tns1:AmountType" />
+			<element minOccurs="0" name="ContractCost"
+				type="tns1:AmountType" />
+
+			<element minOccurs="0" name="BillingClass" type="string" />
+			<element minOccurs="0" name="BillingSubClass" type="string" />
+			<element minOccurs="0" name="AutoAddedProgramName"
+				type="string" />
+			<element minOccurs="0" name="AutoAddedProgramCode"
+				type="string" />
+			<element minOccurs="0" name="PromotionID" type="string" />
+			<element minOccurs="0" name="DealLevel" type="string" />
+			<element minOccurs="0" name="RebateStartDate" type="date" />
+
+			<element minOccurs="0" name="ExpectedShipDate" type="date" />
+
+			<element minOccurs="0" name="OriginalRequestedShipDate"
+				type="date" />
+			<element minOccurs="0" name="OECostActual" type="string" />
+			<element minOccurs="0" name="OECostOverrideCode"
+				type="string" />
+			<element minOccurs="0" name="OECostSystem" type="string" />
+			<element minOccurs="0" name="OECostExtendedShipped"
+				type="string" />
+			<element minOccurs="0" name="OECostExtendedOrdered"
+				type="string" />
+			<element minOccurs="0" name="RebateLineSequenceId"
+				type="string" />
+		</sequence>
+	</complexType>
+
+	<element name="Shipment" type="tns:ShipmentType" />
+
+	<complexType name="EDIDocumentType">
+		<sequence>
+			<element minOccurs="0" name="InvoiceStatus" type="string" />
+			<element minOccurs="0" name="Invoices" type="string" />
+			<element minOccurs="0" name="InvoiceInUseWS" type="string" />
+			<element minOccurs="0" name="InvoiceSentDateTime" type="dateTime" />
+			<element minOccurs="0" name="IsAcknowledgements" type="boolean" />
+			<element minOccurs="0" name="AcknowledgementStatus"
+				type="string" />
+			<element minOccurs="0" name="IsHoldAcknowledgments"
+				type="boolean" />
+			<element minOccurs="0" name="AcknowledgementInUseWS" type="string" />
+			<element minOccurs="0" name="AcknowledgementDateTime"
+				type="dateTime" />
+			<element minOccurs="0" name="IsAdvanceShipnotice" type="boolean" />
+			<element minOccurs="0" name="ASNStatus" type="string" />
+			<element minOccurs="0" name="IsHoldASN" type="boolean" />
+			<element minOccurs="0" name="ASNInUseWS" type="string" />
+			<element minOccurs="0" name="ASNSentDateTime" type="dateTime" />
+			<element minOccurs="0" name="OrderCreationTime" type="string" />
+		</sequence>
+	</complexType>
+</schema>

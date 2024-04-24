@@ -1,0 +1,30 @@
+Manifest-Version: 1.0.0.202403081114
+Bundle-ManifestVersion: 2
+Bundle-Name: Com Imperialdade Proofofdelivery Module
+Bundle-SymbolicName: com.imperialdade.proofofdelivery
+Bundle-Version: 1.0.0.202403081114
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tibco
+ .bw.module; filter:="(&(name=com.imperialdade.common.canonical)(version
+ =1.0.0))",com.tibco.bw.module; filter:="(&(name=com.imperialdade.common
+ .jdbc.connection)(version=1.0.0))",com.tibco.bw.module; filter:="(&(nam
+ e=com.imperialdade.common.jms.connection)(version=1.0.0))",com.tibco.bw
+ .module; filter:="(&(name=com.imperialdade.common.logging)(version=1.0.
+ 0))",com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.smtp
+ .connection)(version=1.0.0))",com.tibco.bw.palette; filter:="(name=bw.g
+ eneralactivities)",com.tibco.bw.palette; filter:="(name=bw.jdbc)",com.t
+ ibco.bw.palette; filter:="(name=bw.file)",com.tibco.bw.palette; filter:
+ ="(name=bw.mail)",com.tibco.bw.palette; filter:="(name=bw.restjson)",co
+ m.tibco.bw.palette; filter:="(name=bw.jms)",com.tibco.bw.palette; filte
+ r:="(name=bw.http)",com.tibco.bw.sharedresource.model; filter:="(name=b
+ w.httpclient)",com.tibco.bw.sharedresource.model; filter:="(name=bw.cre
+ d)",com.tibco.bw.sharedresource.model; filter:="(name=bw.sslclient)",co
+ m.tibco.bw.sharedresource.model; filter:="(name=bw.userid)"
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 2.8.2 V17 2023-05-19
+Bundle-ClassPath: .
+

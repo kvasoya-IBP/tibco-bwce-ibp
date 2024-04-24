@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:S2KCustomerData="http://www.example.org/S2KCustomerData" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Do9PUZcPEe2G9ORtdwAbqQ" name="dataFormat.parseCustomerData" type="dataformat:DataFormat">
+  <imports xmi:id="__055cJcPEe2G9ORtdwAbqQ" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/S2KCustomerData"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Do9PUpcPEe2G9ORtdwAbqQ" formatType="Delimiter separated" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="S2KCustomerData:customerData" fieldOffsetsStr="S2kCustID(0,0)&#xA;S2kShipTo(0,0)&#xA;FullfilmentERP(0,0)&#xA;ERPCust(0,0)&#xA;ERPShipTo(0,0)">
+    <fieldOffsets xmi:id="__2WD4JcPEe2G9ORtdwAbqQ" name="S2kCustID"/>
+    <fieldOffsets xmi:id="__2WD4ZcPEe2G9ORtdwAbqQ" name="S2kShipTo"/>
+    <fieldOffsets xmi:id="__2WD4pcPEe2G9ORtdwAbqQ" name="FullfilmentERP"/>
+    <fieldOffsets xmi:id="__2WD45cPEe2G9ORtdwAbqQ" name="ERPCust"/>
+    <fieldOffsets xmi:id="__2WD5JcPEe2G9ORtdwAbqQ" name="ERPShipTo"/>
+  </jndi:configuration>
+</jndi:namedResource>

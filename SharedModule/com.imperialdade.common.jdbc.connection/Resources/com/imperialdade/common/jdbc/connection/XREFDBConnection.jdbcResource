@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jdbc="http://xsd.tns.tibco.com/amf/models/sharedresource/jdbc" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_CPb-EKAXEe2C2aXBn4bJEg" name="com.imperialdade.common.jdbc.connection.XREFDBConnection" type="jdbc:JdbcDataSource">
+  <jndi:reference xmi:id="_CPzxgKAXEe2C2aXBn4bJEg" key="subjectJndiName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="jdbc:JdbcDataSource" xmi:id="_CPzxgaAXEe2C2aXBn4bJEg">
+    <substitutionBindings xmi:id="_jWwkQKAXEe2C2aXBn4bJEg" template="maxConnections" propName="/Database/MaximumConnections"/>
+    <substitutionBindings xmi:id="_kWb4kKAXEe2C2aXBn4bJEg" template="username" propName="/Database/Username"/>
+    <substitutionBindings xmi:id="_lY9skKAXEe2C2aXBn4bJEg" template="password" propName="/Database/Password"/>
+    <connectionConfig xsi:type="jdbc:NonXaConnection" xmi:id="_CPzxgqAXEe2C2aXBn4bJEg" jdbcDriver="com.microsoft.sqlserver.jdbc.SQLServerDriver" dbURL="jdbc:sqlserver://&lt;serverName>:&lt;portNumber>;databaseName=&lt;dbname>;">
+      <substitutionBindings xmi:id="_nSgBEKAXEe2C2aXBn4bJEg" template="dbURL" propName="/Database/JDBCURL"/>
+      <substitutionBindings xmi:id="_oUFZ4KAXEe2C2aXBn4bJEg" template="loginTimeout" propName="/Database/LoginTimeoutSec"/>
+      <substitutionBindings xmi:id="_qOYjYKAXEe2C2aXBn4bJEg" template="connectionIdleTimeout" propName="/Database/ConnectionIdleTimeoutSec"/>
+    </connectionConfig>
+    <connectionProperties xmi:id="_ton1oKAXEe2C2aXBn4bJEg" key="jarFile" value="mssql"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:id="http://www.tibco.com/ws/2013/11/identity" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sca_ext="http://www.tibco.com/ns/sca/201311" xmlns:smtp="http://xsd.tns.tibco.com/bw/models/sharedresource/smtp" xmlns:sslclient="http://xsd.tns.tibco.com/bw/sharedresource/trinity/models/sslclient" xmlns:subject="http://xsd.tns.tibco.com/trinity/models/identity/subject" xmi:id="_bxahkRcKEe62leETDtG1yQ" name="com.imperialdade.common.smtp.connection.SMTPResource" type="smtp:SmtpConfiguration">
+  <identitySet xmi:id="_B6HW8BcLEe62leETDtG1yQ" appliesTo="namedResource" name="HttpClientIdentitySet" provides="confidentiality">
+    <sca_ext:intentMap xmi:id="_B6HW8RcLEe62leETDtG1yQ" provides="sca_ext:confidentiality">
+      <sca_ext:qualifier xmi:id="_B6HW8hcLEe62leETDtG1yQ" name="transport">
+        <id:IdentityReference xmi:id="_B6HW8xcLEe62leETDtG1yQ" URI="com.imperialdade.common.smtp.connection.SSLClientResource" type="sslclient:SSLClientConfiguration"/>
+      </sca_ext:qualifier>
+    </sca_ext:intentMap>
+  </identitySet>
+  <jndi:reference xmi:id="_bzQUoBcKEe62leETDtG1yQ" key="identityJNDIName" type="subject:SubjectConfiguration" value=""/>
+  <jndi:configuration xsi:type="smtp:SmtpConfiguration" xmi:id="_bzQUoRcKEe62leETDtG1yQ">
+    <substitutionBindings xmi:id="_IBLb0BcLEe62leETDtG1yQ" template="useTLS" propName="/SMTP/EnableSTARTTLS"/>
+    <tcpDetails xmi:id="_bzQUohcKEe62leETDtG1yQ" connectionTimeout="60000">
+      <substitutionBindings xmi:id="_cy5zwBcKEe62leETDtG1yQ" template="host" propName="/SMTP/Host"/>
+      <substitutionBindings xmi:id="_epvZkBcKEe62leETDtG1yQ" template="port" propName="/SMTP/Port"/>
+      <substitutionBindings xmi:id="_gtNGIBcKEe62leETDtG1yQ" template="soTimeout" propName="/SMTP/Timeoutms"/>
+    </tcpDetails>
+    <userCredentials xmi:id="_bzQUoxcKEe62leETDtG1yQ">
+      <substitutionBindings xmi:id="_iU6DwBcKEe62leETDtG1yQ" template="username" propName="/SMTP/Username"/>
+      <substitutionBindings xmi:id="_j7dK0BcKEe62leETDtG1yQ" template="password" propName="/SMTP/Password"/>
+    </userCredentials>
+  </jndi:configuration>
+</jndi:namedResource>

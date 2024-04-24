@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1671132587587Converted/JsonSchema" xmlns:tns="/T1671132587587Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Request" type="tns:Request"/>
+    <xs:complexType name="Request">
+        <xs:sequence>
+        	<xs:element name="location" type="xs:string"
+        		maxOccurs="1" minOccurs="0">
+        	</xs:element>
+        	<xs:element name="s2KCustID" type="xs:string" maxOccurs="1"
+        		minOccurs="0">
+        	</xs:element>
+        	<xs:element name="s2kShipTo" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
+        	<xs:element name="items" maxOccurs="unbounded"
+        		minOccurs="0">
+        		<xs:complexType>
+        			<xs:sequence>
+        				<xs:element name="id" type="xs:string"
+        					maxOccurs="1" minOccurs="1">
+        				</xs:element>
+        			</xs:sequence>
+        		</xs:complexType>
+        	</xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Reply" type="tns:Reply"/>
+    <xs:complexType name="Reply">
+        <xs:sequence>
+        <xs:element name="Message" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
+        <xs:element name="location" type="xs:string" maxOccurs="1" minOccurs="0"></xs:element>
+        <xs:element name="items" maxOccurs="unbounded" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="id" type="xs:string"
+								maxOccurs="1" minOccurs="1">
+							</xs:element>
+							<xs:element name="ERPItemId"
+								type="xs:string" maxOccurs="1" minOccurs="1">
+							</xs:element>
+							<xs:element name="ERPUOM"
+								type="xs:string" maxOccurs="1" minOccurs="0">
+							</xs:element>
+							<xs:element name="warehouse"
+								type="xs:string" maxOccurs="1" minOccurs="0">
+							</xs:element>
+							<xs:element name="qoh" type="xs:string"
+								maxOccurs="1" minOccurs="0">
+							</xs:element>
+							<xs:element name="qtyAvail" type="xs:string"
+								maxOccurs="1" minOccurs="0">
+							</xs:element>
+							<xs:element name="nextPODueDate"
+								type="xs:string" maxOccurs="1" minOccurs="0">
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

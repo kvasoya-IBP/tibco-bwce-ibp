@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.xref.management/Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef-items.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/S2KItemData"
+    },
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.xref.management/Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef2-items2.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "http://www.example.org/S2KItemData"
+    }
+]}

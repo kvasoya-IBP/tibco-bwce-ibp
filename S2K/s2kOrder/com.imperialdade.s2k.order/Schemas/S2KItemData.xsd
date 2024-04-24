@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/S2KItemData" xmlns:tns="http://www.example.org/S2KItemData" elementFormDefault="qualified">
+
+    <element name="itemData" type="tns:itemData"></element>
+    
+    <complexType name="itemData">
+    	<sequence>
+    		<element name="S2kItemID" type="string"></element>
+    		<element name="S2kUOM" type="string"></element>
+    		<element name="FullfilmentERP" type="string"></element>
+    		<element name="ERPItemID" type="string"></element>
+    		<element name="ERPUOM" type="string"></element>
+    		<element name="ConversionFactor" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+</schema>

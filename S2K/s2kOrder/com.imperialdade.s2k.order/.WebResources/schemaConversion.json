@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.order/Service Descriptors/S2k-Order-Mgmt.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1671132204440Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.order/Service Descriptors/S2k-Order-Mgmt.json",
+        "conversionType": "generated",
+        "xsdSchemaTargetNamespace": "/T1671132587587Converted/JsonSchema"
+    }
+]}

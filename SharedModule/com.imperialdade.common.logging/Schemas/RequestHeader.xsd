@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader" elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader">
+
+    <element name="AltKey">
+    	<complexType>
+    		<sequence>
+    			<element name="AltKeyName" type="string"></element>
+    			<element name="AltKeyValue" type="string" minOccurs="0" maxOccurs="1"></element>
+    		</sequence>
+    	</complexType></element>
+
+    <element name="Header">
+    	<complexType>
+    		<sequence>
+    			<element name="ApplicationID" type="string"></element>
+    			<element name="ComponentName" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="Hostname" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="Timestamp" type="dateTime"></element>
+    			<element name="TransactionDomain" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="TransactionType" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="TransactionID" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="CorrelationID" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="InterfaceID" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="FileName" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="Message" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="RenderID" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="DataEncoding" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="Transaction" type="string" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element ref="tns:AltKey" minOccurs="0" maxOccurs="unbounded"></element>
+    		</sequence>
+    	</complexType></element>
+</schema>

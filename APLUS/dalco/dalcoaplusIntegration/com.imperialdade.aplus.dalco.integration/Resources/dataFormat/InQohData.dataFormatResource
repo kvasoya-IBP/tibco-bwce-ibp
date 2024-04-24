@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ERPQoh="http://www.example.org/ERPQoh" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_Do9PUZcPEe2G9ORtdwAbqQ" name="dataFormat.InQohData" type="dataformat:DataFormat">
+  <imports xmi:id="_WUxXYO61Ee24o7mBb1KENg" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/ERPQoh"/>
+  <imports xmi:id="_K5nVgPjjEe2klIlkaCDLUg" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/UpdateQoh"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_Do9PUpcPEe2G9ORtdwAbqQ" formatType="Delimiter separated" colSeparator="\t" colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="ERPQoh:qohData" fieldOffsetsStr="S2kItemID(0,0)&#xA;S2kUOM(0,0)&#xA;ERPItemID(0,0)&#xA;ERPUOM(0,0)&#xA;Warehouse(0,0)&#xA;QOH(0,0)&#xA;QtyAvail(0,0)&#xA;NextPODueDate(0,0)">
+    <fieldOffsets xmi:id="_SRRfkPjjEe2klIlkaCDLUg" name="S2kItemID"/>
+    <fieldOffsets xmi:id="_SRRfkfjjEe2klIlkaCDLUg" name="S2kUOM"/>
+    <fieldOffsets xmi:id="_SRRfkvjjEe2klIlkaCDLUg" name="ERPItemID"/>
+    <fieldOffsets xmi:id="_SRRfk_jjEe2klIlkaCDLUg" name="ERPUOM"/>
+    <fieldOffsets xmi:id="_SRRflPjjEe2klIlkaCDLUg" name="Warehouse"/>
+    <fieldOffsets xmi:id="_SRRflfjjEe2klIlkaCDLUg" name="QOH"/>
+    <fieldOffsets xmi:id="_SRRflvjjEe2klIlkaCDLUg" name="QtyAvail"/>
+    <fieldOffsets xmi:id="_SRRfl_jjEe2klIlkaCDLUg" name="NextPODueDate"/>
+  </jndi:configuration>
+</jndi:namedResource>

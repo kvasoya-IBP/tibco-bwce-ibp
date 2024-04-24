@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/S2KCustomerData" xmlns:tns="http://www.example.org/S2KCustomerData" elementFormDefault="qualified">
+
+    <element name="customerData" type="tns:customerData"></element>
+    
+    <complexType name="customerData">
+    	<sequence>
+    		<element name="S2kCustID" type="string"></element>
+    		<element name="S2kShipTo" type="string"></element>
+    		<element name="FullfilmentERP" type="string"></element>
+    		<element name="ERPCust" type="string"></element>
+    		<element name="ERPShipTo" type="string"></element>
+    	</sequence>
+    </complexType>
+</schema>

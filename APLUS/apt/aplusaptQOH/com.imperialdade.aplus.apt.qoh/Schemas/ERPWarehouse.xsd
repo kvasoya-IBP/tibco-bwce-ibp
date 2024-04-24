@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ERPWarehouse" xmlns:tns="http://www.example.org/ERPWarehouse" elementFormDefault="qualified">
+<complexType name="ERPWarehouse">
+    	<sequence>
+	    	<element name="S2kCustID" type="string" />
+	    	<element name="S2kShipTo" type="string" />
+	    	<element name="FulfillmentERP" type="string" />
+	    	<element name="ERPCust" type="string" />
+	    	<element name="ERPShipTo" type="string" maxOccurs="1" minOccurs="0" />
+	    	<element name="Warehouse" type="string" />
+     	</sequence>
+    </complexType>
+
+    <element name="ERPWarehouse" type="tns:ERPWarehouse"></element>
+
+
+</schema>

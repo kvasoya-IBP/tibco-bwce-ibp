@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.tibco.com/CommonLE/namespace/Public/ExceptionRequest"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.tibco.com/CommonLE/namespace/Public/ExceptionRequest" xmlns:pref="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader">
+
+	<import schemaLocation="RequestHeader.xsd" namespace="http://www.tibco.com/CommonLE/namespace/Public/RequestHeader"></import>
+	<element name="ExceptionRequest">
+		<complexType>
+			<sequence>
+				<element ref="pref:Header"></element>
+				<element name="ExceptionCode" type="string"></element>
+				<element name="StackTrace" type="string" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="Custom" type="string" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="Timeout" type="string" minOccurs="0"
+					maxOccurs="1">
+				</element>
+				<element name="ReplyDestination" type="string"
+					minOccurs="0" maxOccurs="1">
+				</element>
+				<element name="NotificationChannel" type="string" minOccurs="0" maxOccurs="1"></element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

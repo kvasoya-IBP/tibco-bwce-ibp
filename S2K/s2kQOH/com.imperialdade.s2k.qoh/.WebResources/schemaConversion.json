@@ -1,0 +1,12 @@
+{"records": [
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.qoh/Service Descriptors/services.qoh-qoh.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "/T1671132587587Converted/JsonSchema"
+    },
+    {
+        "jsonSchemaLocation": "/com.imperialdade.s2k.qoh/Service Descriptors/services.getQoh-getQoh.json",
+        "conversionType": "linked",
+        "xsdSchemaTargetNamespace": "/T1671132587587Converted/JsonSchema"
+    }
+]}

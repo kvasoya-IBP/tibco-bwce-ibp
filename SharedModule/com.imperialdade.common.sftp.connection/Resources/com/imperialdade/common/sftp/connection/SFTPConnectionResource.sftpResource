@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmlns:sftpconnection="http://ns.tibco.com/bw/palette/sftpconnection" xmi:id="_PlNlcJNrEe2rTt4DQM810A" name="com.imperialdade.common.sftp.connection.SFTPConnectionResource" type="sftpconnection:sftpconnection">
+  <jndi:configuration xsi:type="sftpconnection:SFTPConnection" xmi:id="_PlOMgJNrEe2rTt4DQM810A">
+    <substitutionBindings xmi:id="_vF62sJYqEe2O0fQ4I5mzYA" template="host" propName="/SFTP/Host"/>
+    <substitutionBindings xmi:id="_yA7PQJYqEe2O0fQ4I5mzYA" template="userName" propName="/SFTP/Username"/>
+    <substitutionBindings xmi:id="_0NLrcJYqEe2O0fQ4I5mzYA" template="password" propName="/SFTP/Password"/>
+    <substitutionBindings xmi:id="_1iIFIJYqEe2O0fQ4I5mzYA" template="port" propName="/SFTP/Port"/>
+    <substitutionBindings xmi:id="_3q7ksJYqEe2O0fQ4I5mzYA" template="timeout" propName="/SFTP/ConnectionTimeoutms"/>
+  </jndi:configuration>
+</jndi:namedResource>

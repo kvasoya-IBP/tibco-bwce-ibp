@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_oLzc8JfaEe2G9ORtdwAbqQ" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.aplus.apt.shipment" name="com.imperialdade.aplus.apt.shipment" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_pyGsYJfaEe2G9ORtdwAbqQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pyP2UJfaEe2G9ORtdwAbqQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pyP2UZfaEe2G9ORtdwAbqQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pyZnUJfaEe2G9ORtdwAbqQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pyZnUZfaEe2G9ORtdwAbqQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_pymboJfaEe2G9ORtdwAbqQ" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_pyqGAJfaEe2G9ORtdwAbqQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_U4IakJffEe2G9ORtdwAbqQ" name="/Configuration/ShipmentFileLocation/LocalDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_aToZ8JffEe2G9ORtdwAbqQ" name="/Configuration/ShipmentFileLocation/RemoteDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_WizU4J47Ee2rGp9W8mhUdA" name="/Configuration/ShipmentFileLocation/ArchiveDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="__1C7oKpQEe2YiKq0QY9IIg" name="/Configuration/ShipmentFileLocation/ErrorDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_7zKiYJ2eEe2htaLFJxmvbA" name="/Configuration/JMS/ShiptmentTopicDestination" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_nTv5cLjdEe2SubuGLdMKiw" name="/Configuration/JMS/EmailNotificationTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_SSKXMKpREe2YiKq0QY9IIg" name="/Configuration/SFTP/Timeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_EcZEwKpSEe2YiKq0QY9IIg" name="/Configuration/Scheduler/TimeIntervalMins" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_oagnUJfaEe2G9ORtdwAbqQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_oagnUZfaEe2G9ORtdwAbqQ" processName="services.PickShipmentInfo"/>
+  </sca:component>
+</sca:composite>

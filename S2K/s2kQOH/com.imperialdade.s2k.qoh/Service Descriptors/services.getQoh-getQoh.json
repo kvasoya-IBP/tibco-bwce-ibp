@@ -1,0 +1,89 @@
+{
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "getQoh",
+    "description" : "getQoh service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/erp/qoh" : {
+      "post" : {
+        "summary" : "postGetQoh",
+        "description" : "postGetQoh",
+        "operationId" : "post-erp-qoh",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ {
+          "name" : "body",
+          "in" : "body",
+          "description" : "",
+          "schema" : {
+            "$ref" : "#/definitions/Request"
+          },
+          "required" : true
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "a Reply to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/Reply"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "Request" : {
+      "type" : "object",
+      "properties" : {
+        "location" : {
+          "type" : "string"
+        },
+        "s2KCustID" : {
+          "type" : "string"
+        },
+        "s2kShipTo" : {
+          "type" : "string"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/items",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "Reply" : {
+      "type" : "object",
+      "properties" : {
+        "Message" : {
+          "type" : "string"
+        },
+        "location" : {
+          "type" : "string"
+        },
+        "items" : {
+          "type" : "array",
+          "items" : {
+            "$ref" : "#/definitions/items",
+            "uniqueItems" : false
+          }
+        }
+      }
+    },
+    "items" : {
+      "type" : "object",
+      "required" : [ "id" ],
+      "properties" : {
+        "id" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}

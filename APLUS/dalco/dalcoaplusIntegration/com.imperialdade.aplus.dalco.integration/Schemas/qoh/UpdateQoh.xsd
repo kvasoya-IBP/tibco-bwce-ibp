@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/UpdateQoh" xmlns:tns="http://www.example.org/UpdateQoh" elementFormDefault="qualified">
+
+
+    
+    <complexType name="qohData">
+    	<sequence>
+    		<element name="ERPItemID" type="string"></element>
+    		<element name="ERPUOM" type="string"></element>
+    		<element name="Warehouse" type="string"></element>
+    		<element name="fulfillmentERP" type="string"></element>
+    		<element name="QOH" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="QtyAvail" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="NextPODueDate" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Rows">
+    	<sequence>
+    		<element name="qohData" type="tns:qohData" maxOccurs="unbounded" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="Rows" type="tns:Rows"></element>
+</schema>

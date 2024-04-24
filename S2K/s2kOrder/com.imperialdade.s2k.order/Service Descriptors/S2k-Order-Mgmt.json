@@ -1,0 +1,83 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "S2k-Order-Mgmt",
+    "x-lastModified": "15 December 2022 2:19:03 pm (Eastern Standard Time)",
+    "description": "S2k Order Mgmt API"
+  },
+  "paths": {
+    "/order": {
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success Response",
+            "schema": {
+              "$ref": "#/definitions/Reply"
+            },
+            "examples": {
+              "application/json": {
+                "Message": "File Received"
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid JSON File",
+            "schema": {
+              "$ref": "#/definitions/Reply"
+            }
+          },
+          "404": {
+            "description": "File Not Found",
+            "schema": {
+              "$ref": "#/definitions/Reply"
+            }
+          },
+          "405": {
+            "description": "Unsupported JSON File",
+            "schema": {
+              "$ref": "#/definitions/Reply"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Request containing the JSON file name.",
+            "schema": {
+              "$ref": "#/definitions/Request"
+            }
+          }
+        ],
+        "operationId": "postOrder",
+        "consumes": [
+          "application/json"
+        ],
+        "description": "API to retrieve and process Order JSON file from a remote location.",
+        "summary": "S2k Order Mgmt API"
+      }
+    }
+  },
+  "definitions": {
+    "Reply": {
+      "type": "object",
+      "properties": {
+        "Message": {
+          "type": "string"
+        }
+      }
+    },
+    "Request": {
+      "type": "object",
+      "properties": {
+        "fileName": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

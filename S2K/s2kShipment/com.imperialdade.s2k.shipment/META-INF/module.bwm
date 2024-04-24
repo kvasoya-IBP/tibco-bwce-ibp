@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_Z3XD4J2hEe2htaLFJxmvbA" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.s2k.shipment" name="com.imperialdade.s2k.shipment" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:property xmi:id="_ay44AJ2hEe2htaLFJxmvbA" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_ay44AZ2hEe2htaLFJxmvbA" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_azCpAJ2hEe2htaLFJxmvbA" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_azCpAZ2hEe2htaLFJxmvbA" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_azCpAp2hEe2htaLFJxmvbA" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_azKk0J2hEe2htaLFJxmvbA" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_azKk0Z2hEe2htaLFJxmvbA" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_xEOzIJ2hEe2htaLFJxmvbA" name="/Configuration/JMS/ShipmentQueueDestination" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0CLyAJ2hEe2htaLFJxmvbA" name="/Configuration/JMS/MaxSessions" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_0EYxcJ2hEe2htaLFJxmvbA" name="/Configuration/JMS/PollingIntervalSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Aem_EKubEe2woPYTe6DDFQ" name="/Configuration/JMS/MaxRedeliveryCount" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_qucMwLjfEe2SubuGLdMKiw" name="/Configuration/JMS/EmailNotificationTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_DSodQJ2iEe2htaLFJxmvbA" name="/Configuration/ShipmentFileLocation/RemoteDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_p8-KMKpSEe2YiKq0QY9IIg" name="/Configuration/SFTP/Timeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HUL3EMTGEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/Host" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_MpQeUMTGEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/Port" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Smw-kMTGEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/IdleConnectionTimeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_cmldsMTGEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/MaxTotalConnections" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_eTfEYMTGEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/MaxTotalConnectionsPerHost" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_C2-2gMTHEe2W4deBJ0NpXg" name="/Configuration/HTTPClient/ResourcePath" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_usaZ0MT2Ee24mb3oNSgIpw" name="/Configuration/HTTPClient/StaleCheck" type="XMLSchema:boolean" scaext:simpleValue="false" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_F35RgNsTEe6bcq8TfQmeEg" name="/Configuration/HTTPClient/sleepTimeInterval" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_aBsEkJ2hEe2htaLFJxmvbA" name="ComponentSubscribeShipmentInfo" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_aBsEkZ2hEe2htaLFJxmvbA" processName="services.SubscribeShipmentInfo"/>
+  </sca:component>
+</sca:composite>

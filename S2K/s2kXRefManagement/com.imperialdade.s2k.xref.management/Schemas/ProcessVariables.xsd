@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/ProcessVariables" xmlns:tns="http://www.example.org/ProcessVariables" elementFormDefault="qualified">
+
+    <element name="Variables">
+    	<complexType>
+    		<sequence>
+    			<element name="ElapsedTime" type="long" minOccurs="0"
+    				maxOccurs="1">
+    			</element>
+    			<element name="CorrelationID" type="string"
+    				minOccurs="0" maxOccurs="1">
+    			</element>
+    			<element name="TransactionID" type="string" minOccurs="0" maxOccurs="1"></element>
+    		</sequence>
+    	</complexType></element>
+
+</schema>

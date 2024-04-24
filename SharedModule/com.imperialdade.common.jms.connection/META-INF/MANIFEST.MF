@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Com Imperialdade Common Jms Connection Module
+Bundle-SymbolicName: com.imperialdade.common.jms.connection
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-SharedModule: META-INF/module.bwm
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.jmsconnection)"
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Provide-Capability: com.tibco.bw.module; name="com.imperialdade.common.jms.connection"; version:Version="1.0.0",
+ com.tibco.bw.schemas; ns="http://com.tibco.bw.plugin.jms.properties50f0ba48-adc3-4119-82dc-01036ea94dbeJMSApplicationProperties",
+ com.tibco.bw.resources; name="com.imperialdade.common.jms.connection"
+TIBCO-BW-Version: 2.8.0 V26 2022-11-02

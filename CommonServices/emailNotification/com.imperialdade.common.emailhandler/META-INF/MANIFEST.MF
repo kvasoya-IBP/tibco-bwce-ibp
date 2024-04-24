@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Com Imperialdade Common Send Email Module
+Bundle-SymbolicName: com.imperialdade.common.emailhandler
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.jms.connection)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.logging)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.smtp.connection)(version=1.0.0))",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.mail)",
+ com.tibco.bw.palette; filter:="(name=bw.jms)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.cred)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.smtp)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.sslclient)"
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 2.8.0 V26 2022-11-02

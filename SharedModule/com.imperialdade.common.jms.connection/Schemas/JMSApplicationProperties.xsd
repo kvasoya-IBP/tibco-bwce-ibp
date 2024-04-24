@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://com.tibco.bw.plugin.jms.properties50f0ba48-adc3-4119-82dc-01036ea94dbeJMSApplicationProperties" xmlns:tns="http://com.tibco.bw.plugin.jms.properties50f0ba48-adc3-4119-82dc-01036ea94dbeJMSApplicationProperties" elementFormDefault="qualified">
+<complexType name="jmsAppPropType">
+	<sequence>
+		<element name="CorrelationID" type="string" minOccurs="1"
+			maxOccurs="1">
+		</element>
+		<element name="SequenceKey" type="string" minOccurs="0"
+			maxOccurs="1">
+		</element>
+		<element name="OperationType" type="string" minOccurs="0" maxOccurs="1"></element>
+	</sequence></complexType>
+</schema>

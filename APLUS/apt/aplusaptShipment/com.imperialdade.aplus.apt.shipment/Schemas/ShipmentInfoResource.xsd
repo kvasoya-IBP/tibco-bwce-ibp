@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tns.tibco.com/bw/json/1675426038808" elementFormDefault="qualified" targetNamespace="http://tns.tibco.com/bw/json/1675426038808">
+ <complexType name="ShipmentInfoElementType">
+    <sequence>
+      <element maxOccurs="1" minOccurs="0" name="Shipment">
+        <complexType>
+          <sequence>
+            <element maxOccurs="1" minOccurs="0" name="Header">
+              <complexType>
+                <sequence>
+                	<element maxOccurs="1" minOccurs="0"
+                		name="EDITransaction" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Customer"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OrderNbr"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="OrderGen"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="S2KOrderNbr" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="OrderType" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ShipToNbr" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="ShipDate"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="InvDate"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Route"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Stop"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="InvPrintDate" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="CustomerPO" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ShippingInst" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="MiscNote"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="InvoiceNbr" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="WH"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Allocate"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ItemSalesAmt" type="string" />
+                	<element name="FreightChgAmt" type="string" maxOccurs="1" minOccurs="0"></element>
+                	<element maxOccurs="1" minOccurs="0"
+                		name="SpecChgAmt" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="TradeDiscAmt" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="TaxAmt"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="FedExciseTaxAmt" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ContainerCharge" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="InvoiceAmt" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="CarrierCode" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="FulfillmentERP" type="string" />
+                	<element maxOccurs="unbounded" minOccurs="0"
+                		name="TrackingNumbers" type="string" />
+                </sequence>
+              </complexType>
+            </element>
+            <element maxOccurs="unbounded" minOccurs="0" name="Details">
+              <complexType>
+                <sequence>
+                	<element maxOccurs="1" minOccurs="0" name="OrderSeq"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="LineType"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ItemNumber" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Desc1"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Desc2"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="QtyOrdered" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="QtyShipped" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="QtyBO"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="UM"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="SellPrice" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="LineAmount" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="CurrAvgCost" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="Allocate"
+                		type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="UnitWeight" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="ExtWeight" type="string" />
+                	<element maxOccurs="1" minOccurs="0" name="EntrySeq"
+                		type="string" />
+                                    <element name="RebateInfo" minOccurs="0" maxOccurs="1">
+                		<complexType>
+                			<sequence>
+                				<element name="RebateID" type="string" minOccurs="0" maxOccurs="1">
+                				</element>
+                				<element name="RebateVendor" type="string" minOccurs="0" maxOccurs="1">
+                				</element>
+                				<element name="ContractNumber" type="string" minOccurs="0" maxOccurs="1">
+                				</element>
+                				<element name="ContractCost" type="string" minOccurs="0" maxOccurs="1">
+                				</element>
+                			</sequence>
+                		</complexType></element>
+                	<element maxOccurs="1" minOccurs="0"
+                		name="InventoryCost" type="string" />
+                	<element maxOccurs="1" minOccurs="0"
+                		name="EDILineNbr" type="string" />
+                </sequence>
+              </complexType>
+            </element>
+          </sequence>
+        </complexType>
+      </element>
+    </sequence>
+  </complexType>
+  <element name="ShipmentInfoElement" type="tns:ShipmentInfoElementType"/>
+</schema>

@@ -1,0 +1,27 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Com Imperialdade S2k Xref Managemnt Module
+Bundle-SymbolicName: com.imperialdade.s2k.xref.management
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: TIBCO Software Inc.
+TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
+Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.logging)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.jdbc.connection)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.jms.connection)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.sftp.connection)(version=1.0.0))",
+ com.tibco.bw.module; filter:="(&(name=com.imperialdade.common.httpconnector.connection)(version=1.0.0))",
+ com.tibco.bw.palette; filter:="(name=bw.generalactivities)",
+ com.tibco.bw.palette; filter:="(name=bw.jdbc)",
+ com.tibco.bw.palette; filter:="(name=bw.file)",
+ com.tibco.bw.palette; filter:="(name=bw.sftp)",
+ com.tibco.bw.palette; filter:="(name=bw.jms)",
+ com.tibco.bw.palette; filter:="(name=bw.parse)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.dataformat)",
+ com.tibco.bw.sharedresource.model; filter:="(name=bw.httpconnector)",
+ com.tibco.bw.binding.model; filter:="(name=bw.rest)"
+TIBCO-BW-Edition: bwcf
+TIBCO-BW-ConfigProfile: META-INF/default.substvar
+TIBCO-BW-ApplicationModule: META-INF/module.bwm
+TIBCO-BW-JobSharedVariables: META-INF/module.jsv
+TIBCO-BW-Version: 2.9.0 V23 2023-11-10

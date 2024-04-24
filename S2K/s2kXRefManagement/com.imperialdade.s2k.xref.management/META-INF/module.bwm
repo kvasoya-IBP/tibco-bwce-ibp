@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_eYiqoMqdEe6SNM3uoyj0kw" targetNamespace="http://tns.tibco.com/bw/composite/com.imperialdade.s2k.xref.management" name="com.imperialdade.s2k.xref.management" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_eowNcNAaEe6n-6mcMdX3Sg" name="items" promote="ComponentItemXRef/items2">
+    <sca:interface.wsdl xmi:id="_eo5-cNAaEe6n-6mcMdX3Sg" interface="http://xmlns.example.com/20240220100207PLT#wsdl.interface(items2)" scaext:wsdlLocation="../Processes/com/imperialdade/s2k/xref/management/api/ItemXRef2.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_epJPANAaEe6n-6mcMdX3Sg" name="RestService1" path="/items" docBasePath="http://localhost:7777/com.imperialdade.s2k.xref.management" docResourcePath="items" basePath="/" connector="com.imperialdade.common.httpconnector.connection.HTTPConnectorResource" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/com.imperialdade.s2k.xref.management.api.ItemXRef2-items2.json" applyPolicyToChildren="true">
+      <operation xmi:id="_ewAsANAaEe6n-6mcMdX3Sg" operationName="get" nickname="get-items2" httpMethod="GET" notes="getItems2" responseStyle="element" outputPartName="item">
+        <parameters xmi:id="_FS4U4NAbEe6n-6mcMdX3Sg">
+          <parameterMapping xmi:id="_FS5jANAbEe6n-6mcMdX3Sg" parameterName="S2kItemID" parameterType="Query" dataType="string" description=""/>
+          <parameterMapping xmi:id="_IriSwNAbEe6n-6mcMdX3Sg" parameterName="FullfilmentERP" parameterType="Query" dataType="string" description=""/>
+        </parameters>
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <operation xmi:id="_ewB6INAaEe6n-6mcMdX3Sg" operationName="put" nickname="put-items2" httpMethod="PUT" notes="putItems2" responseStyle="element" requestStyle="array" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <advancedConfig xmi:id="_epJ2ENAaEe6n-6mcMdX3Sg" blockingQueueSize="8192"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_ewB6IdAaEe6n-6mcMdX3Sg" bindingName="RestService1"/>
+  </sca:service>
+  <sca:property xmi:id="_gCJswMqdEe6SNM3uoyj0kw" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gCbZkMqdEe6SNM3uoyj0kw" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gCec4MqdEe6SNM3uoyj0kw" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gCj8cMqdEe6SNM3uoyj0kw" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gCpcAMqdEe6SNM3uoyj0kw" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_gCuUgMqdEe6SNM3uoyj0kw" name="BW.CLOUD.PORT" type="XMLSchema:int" scalable="true"/>
+  <sca:property xmi:id="_gC0bIMqdEe6SNM3uoyj0kw" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_sYHR8MqfEe6SNM3uoyj0kw" name="/Configuration/CustInfoFileLoc/LocalDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_HAthMMqgEe6SNM3uoyj0kw" name="/Configuration/CustInfoFileLoc/RemoteDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_IODeEMqgEe6SNM3uoyj0kw" name="/Configuration/CustInfoFileLoc/ArchiveDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_JP58oMqgEe6SNM3uoyj0kw" name="/Configuration/CustInfoFileLoc/ErrorDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_xl_sEMqfEe6SNM3uoyj0kw" name="/Configuration/ItemInfoFileLoc/LocalDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LCXYwMqgEe6SNM3uoyj0kw" name="/Configuration/ItemInfoFileLoc/RemoteDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LF6cAMqgEe6SNM3uoyj0kw" name="/Configuration/ItemInfoFileLoc/ArchiveDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_LKAR0MqgEe6SNM3uoyj0kw" name="/Configuration/ItemInfoFileLoc/ErrorDir" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zOpr8MqfEe6SNM3uoyj0kw" name="/Configuration/Scheduler/TimeIntervalMins" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_Xkv7QMqgEe6SNM3uoyj0kw" name="/Configuration/JDBC/TimeoutSec" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_YtcBoMqgEe6SNM3uoyj0kw" name="/Configuration/JDBC/MaxRows" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_p8pfoMqgEe6SNM3uoyj0kw" name="/Configuration/SFTP/Timeoutms" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_3sPcIMqgEe6SNM3uoyj0kw" name="/Configuration/JMS/EmailNotificationTopic" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_kcrh4MqeEe6SNM3uoyj0kw" name="ComponentSeedCustomerXRef" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_kcsI8MqeEe6SNM3uoyj0kw" processName="com.imperialdade.s2k.xref.management.services.SeedCustomerXRef"/>
+  </sca:component>
+  <sca:component xmi:id="_lC-s4MqeEe6SNM3uoyj0kw" name="ComponentSeedItemXRef" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_lC-s4cqeEe6SNM3uoyj0kw" processName="com.imperialdade.s2k.xref.management.services.SeedItemXRef"/>
+  </sca:component>
+  <sca:component xmi:id="_KXvyYNAaEe6n-6mcMdX3Sg" name="ComponentItemXRef" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_KXvyYdAaEe6n-6mcMdX3Sg" processName="com.imperialdade.s2k.xref.management.api.ItemXRef"/>
+    <sca:service xmi:id="_eoo4sNAaEe6n-6mcMdX3Sg" name="items2">
+      <sca:interface.wsdl xmi:id="_eor8ANAaEe6n-6mcMdX3Sg" interface="http://xmlns.example.com/20240220100207PLT#wsdl.interface(items2)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
