@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:EDIItems="http://www.example.org/EDIItems" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_aaRSYAQxEe-TSLPtDWVtIA" name="dataFormat.EDIItemData" type="dataformat:DataFormat">
+  <imports xmi:id="_LL-doAS9Ee-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDIItems"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_aaRSYQQxEe-TSLPtDWVtIA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="EDIItems:Item" lineLength="593" fieldOffsetsStr="Item(0,6)&#xA;LineNumber(6,10)&#xA;QtyOrdered(10,23)&#xA;UnitofMeasure(23,25)&#xA;UnitCost(25,39)&#xA;UOM(39,41)&#xA;CustomerPartNo(41,73)&#xA;DistributorPartNo(73,105)&#xA;MFGPartNumber(105,137)&#xA;Description(137,173)&#xA;DateNeeded(173,181)&#xA;UserField1(181,189)&#xA;UserField2(189,197)&#xA;UserField3(197,205)&#xA;UserField4(205,213)&#xA;UserField5(213,221)&#xA;UserField6(221,229)&#xA;UserField7(229,237)&#xA;UserField8(237,245)&#xA;UserField9(245,253)&#xA;UserField10(253,261)&#xA;PromiseDate(261,269)&#xA;DueDate(269,277)&#xA;ExpectedShipDate(277,285)&#xA;EDILineNo(285,298)&#xA;eBayDescription(298,344)&#xA;NetAmount(344,357)&#xA;TaxAmount(357,370)&#xA;Discount(370,383)&#xA;SpecialPriceCost(383,384)&#xA;StockUnitCost(384,398)&#xA;EDIUnitCost(398,400)&#xA;Expedite(400,401)&#xA;ExpediteDays(401,404)&#xA;ExpandedVendorProduct(404,454)&#xA;ManufacturerPart(454,504)&#xA;BrandCode(504,510)&#xA;CustomerPart(510,534)&#xA;AdditionalPrintInfo(534,579)&#xA;Countryoforigin(579,581)&#xA;HarmonizedSystemTariffCode(581,592)">
+    <fieldOffsets xmi:id="_LM5qsAS9Ee-TSLPtDWVtIA" name="Item" end="6"/>
+    <fieldOffsets xmi:id="_LM5qsQS9Ee-TSLPtDWVtIA" name="LineNumber" start="6" end="10"/>
+    <fieldOffsets xmi:id="_LM5qsgS9Ee-TSLPtDWVtIA" name="QtyOrdered" start="10" end="23"/>
+    <fieldOffsets xmi:id="_LM5qswS9Ee-TSLPtDWVtIA" name="UnitofMeasure" start="23" end="25"/>
+    <fieldOffsets xmi:id="_LM5qtAS9Ee-TSLPtDWVtIA" name="UnitCost" start="25" end="39"/>
+    <fieldOffsets xmi:id="_LM5qtQS9Ee-TSLPtDWVtIA" name="UOM" start="39" end="41"/>
+    <fieldOffsets xmi:id="_LM5qtgS9Ee-TSLPtDWVtIA" name="CustomerPartNo" start="41" end="73"/>
+    <fieldOffsets xmi:id="_LM5qtwS9Ee-TSLPtDWVtIA" name="DistributorPartNo" start="73" end="105"/>
+    <fieldOffsets xmi:id="_LM5quAS9Ee-TSLPtDWVtIA" name="MFGPartNumber" start="105" end="137"/>
+    <fieldOffsets xmi:id="_LM5quQS9Ee-TSLPtDWVtIA" name="Description" start="137" end="173"/>
+    <fieldOffsets xmi:id="_LM5qugS9Ee-TSLPtDWVtIA" name="DateNeeded" start="173" end="181"/>
+    <fieldOffsets xmi:id="_LM5quwS9Ee-TSLPtDWVtIA" name="UserField1" start="181" end="189"/>
+    <fieldOffsets xmi:id="_LM5qvAS9Ee-TSLPtDWVtIA" name="UserField2" start="189" end="197"/>
+    <fieldOffsets xmi:id="_LM5qvQS9Ee-TSLPtDWVtIA" name="UserField3" start="197" end="205"/>
+    <fieldOffsets xmi:id="_LM5qvgS9Ee-TSLPtDWVtIA" name="UserField4" start="205" end="213"/>
+    <fieldOffsets xmi:id="_LM5qvwS9Ee-TSLPtDWVtIA" name="UserField5" start="213" end="221"/>
+    <fieldOffsets xmi:id="_LM5qwAS9Ee-TSLPtDWVtIA" name="UserField6" start="221" end="229"/>
+    <fieldOffsets xmi:id="_LM5qwQS9Ee-TSLPtDWVtIA" name="UserField7" start="229" end="237"/>
+    <fieldOffsets xmi:id="_LM5qwgS9Ee-TSLPtDWVtIA" name="UserField8" start="237" end="245"/>
+    <fieldOffsets xmi:id="_LM5qwwS9Ee-TSLPtDWVtIA" name="UserField9" start="245" end="253"/>
+    <fieldOffsets xmi:id="_LM5qxAS9Ee-TSLPtDWVtIA" name="UserField10" start="253" end="261"/>
+    <fieldOffsets xmi:id="_LM5qxQS9Ee-TSLPtDWVtIA" name="PromiseDate" start="261" end="269"/>
+    <fieldOffsets xmi:id="_LM5qxgS9Ee-TSLPtDWVtIA" name="DueDate" start="269" end="277"/>
+    <fieldOffsets xmi:id="_LM5qxwS9Ee-TSLPtDWVtIA" name="ExpectedShipDate" start="277" end="285"/>
+    <fieldOffsets xmi:id="_LM5qyAS9Ee-TSLPtDWVtIA" name="EDILineNo" start="285" end="298"/>
+    <fieldOffsets xmi:id="_LM5qyQS9Ee-TSLPtDWVtIA" name="eBayDescription" start="298" end="344"/>
+    <fieldOffsets xmi:id="_LM5qygS9Ee-TSLPtDWVtIA" name="NetAmount" start="344" end="357"/>
+    <fieldOffsets xmi:id="_LM5qywS9Ee-TSLPtDWVtIA" name="TaxAmount" start="357" end="370"/>
+    <fieldOffsets xmi:id="_LM5qzAS9Ee-TSLPtDWVtIA" name="Discount" start="370" end="383"/>
+    <fieldOffsets xmi:id="_LM5qzQS9Ee-TSLPtDWVtIA" name="SpecialPriceCost" start="383" end="384"/>
+    <fieldOffsets xmi:id="_LM5qzgS9Ee-TSLPtDWVtIA" name="StockUnitCost" start="384" end="398"/>
+    <fieldOffsets xmi:id="_LM5qzwS9Ee-TSLPtDWVtIA" name="EDIUnitCost" start="398" end="400"/>
+    <fieldOffsets xmi:id="_LM5q0AS9Ee-TSLPtDWVtIA" name="Expedite" start="400" end="401"/>
+    <fieldOffsets xmi:id="_LM5q0QS9Ee-TSLPtDWVtIA" name="ExpediteDays" start="401" end="404"/>
+    <fieldOffsets xmi:id="_LM5q0gS9Ee-TSLPtDWVtIA" name="ExpandedVendorProduct" start="404" end="454"/>
+    <fieldOffsets xmi:id="_LM5q0wS9Ee-TSLPtDWVtIA" name="ManufacturerPart" start="454" end="504"/>
+    <fieldOffsets xmi:id="_LM5q1AS9Ee-TSLPtDWVtIA" name="BrandCode" start="504" end="510"/>
+    <fieldOffsets xmi:id="_LM5q1QS9Ee-TSLPtDWVtIA" name="CustomerPart" start="510" end="534"/>
+    <fieldOffsets xmi:id="_LM5q1gS9Ee-TSLPtDWVtIA" name="AdditionalPrintInfo" start="534" end="579"/>
+    <fieldOffsets xmi:id="_LM5q1wS9Ee-TSLPtDWVtIA" name="Countryoforigin" start="579" end="581"/>
+    <fieldOffsets xmi:id="_LM5q2AS9Ee-TSLPtDWVtIA" name="HarmonizedSystemTariffCode" start="581" end="592"/>
+  </jndi:configuration>
+</jndi:namedResource>

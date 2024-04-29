@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EDIASN" xmlns:tns="http://www.example.org/EDIASN" elementFormDefault="qualified">
+
+    <complexType name="EDIASNRecord">
+    	<sequence>
+    		<element name="ASN" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="PartnerCode" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Name" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Address" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="City" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="State" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Phone" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="DunsNumber" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="erpSystemId" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Address3" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ExpandedCity" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CountryCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="EDIASN" type="tns:EDIASNRecord"></element>
+</schema>

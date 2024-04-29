@@ -31,6 +31,7 @@
     xmlns:ns3="http://tns.tibco.com/bw/palette/internal/activityerror+bw.restjson.JsonRender"
     xmlns:ns30="http://tns.tibco.com/bw/palette/internal/errorlinkhandler+4615696c-81dd-4b48-9d0a-816eae97d1ad"
     xmlns:ns31="activity.jsonRender.output+8967a2c1-80c0-4baa-875c-96ac53a4ec1b+ActivityOutputType"
+    xmlns:ns32="http://www.example.org/EDIFile"
     xmlns:ns4="http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataFile"
     xmlns:ns5="http://tns.tibco.com/bw/activity/output+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutOutputFile"
     xmlns:ns6="http://tns.tibco.com/bw/palette/internal/activityerror+bw.sftp.put"
@@ -45,8 +46,8 @@
         <task name="putOrderFile">
             <endingVariables>
                 <variable>putOrderFile-input</variable>
-                <variable>RenderOrder2</variable>
                 <variable>RemoteDir</variable>
+                <variable>EDIParser</variable>
             </endingVariables>
         </task>
         <task name="Throw">
@@ -73,6 +74,12 @@
         <task name="RenderOrder2">
             <endingVariables>
                 <variable>RenderOrder2-input</variable>
+                <variable>RenderOrder2</variable>
+            </endingVariables>
+        </task>
+        <task name="EDIParser">
+            <endingVariables>
+                <variable>EDIParser-input</variable>
                 <variable>TransformCanonical2</variable>
             </endingVariables>
         </task>
@@ -562,44 +569,6 @@
             <element name="CommandExecutionException" type="tns:CommandExecutionExceptionType"/>
             <element name="ConnectionErrorException" type="tns:ConnectionErrorExceptionType"/>
             <element name="PutFilesException" type="tns:PutFilesExceptionType"/>
-        </schema>
-        <schema attributeFormDefault="unqualified"
-            elementFormDefault="qualified"
-            targetNamespace="http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataASCII"
-            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataASCII">
-            <element name="SFTPPutInputDataASCII" type="Q1:SFTPPutInputType"/>
-            <complexType name="SFTPPutInputType">
-                <sequence>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="RemoteFileName" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="1" name="Data" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Host" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Port" type="int"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="UserName" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Password" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="PrivKey" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="PrivKeyPass" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="ProxyHost" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="ProxyPort" type="int"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="ProxyUserName" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="ProxyPassword" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Encoding" type="string"/>
-                    <element form="unqualified" maxOccurs="1"
-                        minOccurs="0" name="Timeout" type="int"/>
-                </sequence>
-            </complexType>
         </schema>
         <schema
             targetNamespace="http://schemas.tibco.com/bw/plugins/basic/6.0/Exceptions"
@@ -1195,6 +1164,42 @@
                 </choice>
             </complexType>
         </schema>
+        <schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataFile"
+            xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Q1="http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataFile">
+            <element name="SFTPPutInputDataFile" type="Q1:SFTPPutInputType"/>
+            <complexType name="SFTPPutInputType">
+                <sequence>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="RemoteFileName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="1" name="LocalFileName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Host" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Port" type="int"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="UserName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Password" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="PrivKey" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="PrivKeyPass" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="ProxyHost" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="ProxyPort" type="int"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="ProxyUserName" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="ProxyPassword" type="string"/>
+                    <element form="unqualified" maxOccurs="1"
+                        minOccurs="0" name="Timeout" type="int"/>
+                </sequence>
+            </complexType>
+        </schema>
     </tibex:Types>
     <tibex:ProcessInfo callable="false" createdBy="ngollapa"
         createdOn="Tue Dec 27 11:41:07 IST 2022" description=""
@@ -1307,7 +1312,7 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="671"
+                                    <layoutConstraint x="690"
                                     xsi:type="notation:Bounds" y="125"/>
                                     </children>
                                     <children type="4002">
@@ -1574,7 +1579,42 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.8"/>
-                                    <layoutConstraint x="595"
+                                    <layoutConstraint x="574"
+                                    xsi:type="notation:Bounds" y="18"/>
+                                    </children>
+                                    <children type="4002">
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <children type="4017">
+                                    <styles
+                                    fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+                                    <styles fontName="Segoe UI"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+                                    <element href="//0/@process/@activity/@activity/@activities.9"/>
+                                    <layoutConstraint x="690"
                                     xsi:type="notation:Bounds" y="18"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
@@ -1589,7 +1629,7 @@
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <styles xsi:type="bwnotation:ResizingStyle"/>
                                     <element href="//0/@process/@activity/@activity"/>
-                                    <layoutConstraint height="420"
+                                    <layoutConstraint height="369"
                                     width="1128" xsi:type="notation:Bounds"/>
                                 </children>
                                 <styles xsi:type="notation:SortingStyle"/>
@@ -1600,7 +1640,7 @@
                             <styles xsi:type="bwnotation:BackgroundStyle"/>
                             <styles xsi:type="bwnotation:ResizingStyle"/>
                             <element href="//0/@process/@activity"/>
-                            <layoutConstraint height="420" width="1131" xsi:type="notation:Bounds"/>
+                            <layoutConstraint height="369" width="1131" xsi:type="notation:Bounds"/>
                         </children>
                         <children type="4022">
                             <children type="3022">
@@ -1760,7 +1800,7 @@
                     <styles xsi:type="bwnotation:BackgroundStyle"/>
                     <styles xsi:type="bwnotation:ResizingStyle"/>
                     <element href="//0/@process/@activity"/>
-                    <layoutConstraint height="623" width="1131" x="1"
+                    <layoutConstraint height="572" width="1131" x="1"
                         xsi:type="notation:Bounds" y="1"/>
                 </children>
                 <styles xsi:type="notation:SortingStyle"/>
@@ -1769,7 +1809,7 @@
             </children>
             <styles fontName="Segoe UI" lineColor="0" xsi:type="notation:ShapeStyle"/>
             <element href="//0/@process"/>
-            <layoutConstraint height="591" width="1473" xsi:type="notation:Bounds"/>
+            <layoutConstraint height="624" width="1473" xsi:type="notation:Bounds"/>
         </children>
         <styles xsi:type="notation:DiagramStyle"/>
         <element href="//0"/>
@@ -1880,7 +1920,7 @@
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.8"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -1888,7 +1928,8 @@
             <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@links/@children.8"/>
             <bendpoints
-                points="[25, 0, -51, -107]$[71, 0, -5, -107]$[71, 83, -5, -24]" xsi:type="notation:RelativeBendpoints"/>
+                points="[25, 0, -87, -25]$[89, 0, -23, -25]$[89, -10, -23, -35]$[100, -10, -12, -35]" xsi:type="notation:RelativeBendpoints"/>
+            <targetAnchor id="(0.8367346938775511,0.5510204081632653)" xsi:type="notation:IdentityAnchor"/>
         </edges>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.7"
@@ -1913,6 +1954,17 @@
             <element href="//0/@process/@activity/@activity/@links/@children.10"/>
             <bendpoints
                 points="[12, 25, 39, -241]$[12, 260, 39, -6]$[-2, 260, 25, -6]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.9"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName="Segoe UI" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@links/@children.11"/>
+            <bendpoints points="[-12, 25, 36, -74]$[-36, 75, 12, -24]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -1963,6 +2015,7 @@
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.tibco.com/CommonLE/namespace/Public/ExceptionRequest"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema"
         location="../../Schemas/common/ProcessVariables.xsd" namespace="http://www.example.org/ProcessVariables"/>
+    <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDIFile"/>
     <bpws:variables>
         <bpws:variable element="ns:ProcessContext"
             name="_processContext" sca-bpel:internal="true"/>
@@ -1984,7 +2037,7 @@
                 <bpws:literal>com.imperialdade.common.sftp.connection.SFTPConnectionResource</bpws:literal>
             </bpws:from>
         </bpws:variable>
-        <bpws:variable element="ns9:SFTPPutInputDataASCII"
+        <bpws:variable element="ns4:SFTPPutInputDataFile"
             name="putOrderFile-input" sca-bpel:internal="true"/>
         <bpws:variable element="ns5:SFTPPutOutputFile"
             name="putOrderFile" sca-bpel:internal="true"/>
@@ -2044,6 +2097,9 @@
             sca-bpel:property="yes"
             tibex:propertySource="/Configuration/JMS/MaxRedeliveryCount" type="xsd:int"/>
         <bpws:variable element="ns18:LogRequest" name="StartLog-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns11:deliverOrderElement"
+            name="EDIParser-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns32:EDIFileName" name="EDIParser" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -2148,9 +2204,10 @@
                 <bpws:link name="StartLogToThrow" tibex:linkType="ERROR"/>
                 <bpws:link name="StartLogToMapper" tibex:linkType="SUCCESS"/>
                 <bpws:link name="MapperToRenderJSON" tibex:linkType="SUCCESS"/>
-                <bpws:link name="RenderJSONToputOrderFile1" tibex:linkType="SUCCESS"/>
+                <bpws:link name="RenderOrder2ToCallProcess" tibex:linkType="SUCCESS"/>
                 <bpws:link name="TransformCanonical2ToThrow" tibex:linkType="ERROR"/>
                 <bpws:link name="RenderOrder2ToThrow" tibex:linkType="ERROR"/>
+                <bpws:link name="EDIParserToputOrderFile" tibex:linkType="SUCCESS"/>
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
@@ -2197,7 +2254,7 @@
                     name="putOrderFile" outputVariable="putOrderFile"
                     tibex:xpdlId="02372b96-2bb3-4767-8de3-ccedfcf6115f" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
-                        <bpws:target linkName="RenderJSONToputOrderFile1"/>
+                        <bpws:target linkName="EDIParserToputOrderFile"/>
                     </bpws:targets>
                     <bpws:sources>
                         <bpws:source linkName="putOrderFileToThrow"
@@ -2218,7 +2275,7 @@
                     </tibex:tags>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Q1=&quot;http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataASCII&quot; xmlns:tns=&quot;http://com.imperialdade/schema/canonical/v1&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ReceiveCanonicalData&quot;/>&#xa;    &lt;xsl:param name=&quot;RemoteDir&quot;/>&#xa;    &lt;xsl:param name=&quot;RenderOrder2&quot;/>&#xa;    &lt;xsl:template name=&quot;putOrderFile-input&quot; match=&quot;/&quot;>&#xa;        &lt;Q1:SFTPPutInputDataASCII>&#xa;            &lt;xsl:variable name=&quot;fileNameExt&quot; select=&quot;concat(tib:trim($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderCrossReference[1]/tns:CustomerID),&amp;quot;_&amp;quot;,tib:trim($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderID),&amp;quot;.json&amp;quot;)&quot;/>&#xa;            &lt;RemoteFileName>&#xa;                &lt;xsl:value-of select=&quot;concat($RemoteDir, &amp;quot;Order_&amp;quot;, $fileNameExt)&quot;/>&#xa;            &lt;/RemoteFileName>&#xa;            &lt;Data>&#xa;                &lt;xsl:value-of select=&quot;$RenderOrder2/jsonString&quot;/>&#xa;            &lt;/Data>&#xa;        &lt;/Q1:SFTPPutInputDataASCII>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:Q1=&quot;http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataASCII&quot; xmlns:tns=&quot;http://com.imperialdade/schema/canonical/v1&quot; xmlns:tib=&quot;http://www.tibco.com/bw/xslt/custom-functions&quot; xmlns:tns2=&quot;http://tns.tibco.com/bw/activity/put/input+02372b96-2bb3-4767-8de3-ccedfcf6115f+SFTPPutInputDataFile&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ReceiveCanonicalData&quot;/>&lt;xsl:param name=&quot;RemoteDir&quot;/>&lt;xsl:param name=&quot;EDIParser&quot;/>&lt;xsl:template name=&quot;putOrderFile-input&quot; match=&quot;/&quot;>&lt;tns2:SFTPPutInputDataFile>&lt;xsl:variable name=&quot;fileNameExt&quot; select=&quot;concat(tib:trim($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderCrossReference[1]/tns:CustomerID),&amp;quot;_&amp;quot;,tib:trim($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderID),&amp;quot;.dat&amp;quot;)&quot;/>&lt;RemoteFileName>&lt;xsl:value-of select=&quot;concat($RemoteDir, &amp;quot;Order_&amp;quot;, $fileNameExt)&quot;/>&lt;/RemoteFileName>&lt;LocalFileName>&lt;xsl:value-of select=&quot;$EDIParser&quot;/>&lt;/LocalFileName>&lt;/tns2:SFTPPutInputDataFile>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity activityTypeID="bw.sftp.put"
@@ -2229,8 +2286,7 @@
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/sp#//SFTPPut"/>
                                     <value overwriteExistingFile="true"
-                                    sftpConnection="SFTPConnectionProperty"
-                                    useProcessData="true" xsi:type="sftpPalette:SFTPPut"/>
+                                    sftpConnection="SFTPConnectionProperty" xsi:type="sftpPalette:SFTPPut"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
@@ -2330,7 +2386,7 @@
                     <bpws:sources>
                         <bpws:source linkName="StartLogToMapper"/>
                         <bpws:source linkName="StartLogToThrow"
-                            tibex:faultDetailsVar="RenderOrder" tibex:faultNameVar="FaultName">
+                            tibex:faultDetailsVar="StartLog" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
                                 <tibex:expression expression="##error##" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xpath2.0"/>
                             </tibex:DesignExpression>
@@ -2409,7 +2465,7 @@
                     </tibex:tags>
                     <tibex:inputBindings>
                         <tibex:inputBinding
-                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://tns.tibco.com/bw/json/1672935689456&quot; xmlns:tns=&quot;http://com.imperialdade/schema/canonical/v1&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;ReceiveCanonicalData&quot;/>&#xa;    &lt;xsl:template name=&quot;TransformCanonical2-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:deliverOrderElement>&#xa;            &lt;tns4:CustomerOrder>&#xa;                &lt;tns4:Header>&#xa;                    &lt;tns4:CustomerID>&#xa;                        &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerID&quot;/>&#xa;                    &lt;/tns4:CustomerID>&#xa;                    &lt;tns4:OrderType>&#xa;                        &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:OrderType&quot;/>&#xa;                    &lt;/tns4:OrderType>&#xa;                    &lt;tns4:CustomerOrderID>&#xa;                        &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderID&quot;/>&#xa;                    &lt;/tns4:CustomerOrderID>&#xa;                    &lt;tns4:OrderDate>&#xa;                        &lt;xsl:value-of select=&quot;format-date($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:OrderDate, '[Y0001][M01][D01]')&quot;/>&#xa;                    &lt;/tns4:OrderDate>&#xa;                    &lt;tns4:Shipment>&#xa;                        &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToID&quot;>&#xa;                            &lt;tns4:ShipToID>&#xa;                                &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToID&quot;/>&#xa;                            &lt;/tns4:ShipToID>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;tns4:ShipToAddress>&#xa;                            &lt;tns4:Contact>&#xa;                                &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:Contact/tns:Name&quot;>&#xa;                                    &lt;tns4:Name>&#xa;                                        &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:Contact/tns:Name&quot;/>&#xa;                                    &lt;/tns4:Name>&#xa;                                &lt;/xsl:if>&#xa;                            &lt;/tns4:Contact>&#xa;                            &lt;xsl:for-each select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:AddressLine&quot;>&#xa;                                &lt;tns4:AddressLine>&#xa;                                    &lt;xsl:value-of select=&quot;.&quot;/>&#xa;                                &lt;/tns4:AddressLine>&#xa;                            &lt;/xsl:for-each>&#xa;                            &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:City&quot;>&#xa;                                &lt;tns4:City>&#xa;                                    &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:City&quot;/>&#xa;                                &lt;/tns4:City>&#xa;                            &lt;/xsl:if>&#xa;                            &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:State&quot;>&#xa;                                &lt;tns4:State>&#xa;                                    &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:State&quot;/>&#xa;                                &lt;/tns4:State>&#xa;                            &lt;/xsl:if>&#xa;                            &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:ZipCode&quot;>&#xa;                                &lt;tns4:ZipCode>&#xa;                                    &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:ZipCode&quot;/>&#xa;                                &lt;/tns4:ZipCode>&#xa;                            &lt;/xsl:if>&#xa;                        &lt;/tns4:ShipToAddress>&#xa;                        &lt;tns4:RequestedShipDate>&#xa;                            &lt;xsl:value-of select=&quot;format-date($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:RequestedShipDate, '[Y0001][M01][D01]')&quot;/>&#xa;                        &lt;/tns4:RequestedShipDate>&#xa;                    &lt;/tns4:Shipment>&#xa;                    &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerPO&quot;>&#xa;                        &lt;tns4:CustomerPO>&#xa;                            &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerPO&quot;/>&#xa;                        &lt;/tns4:CustomerPO>&#xa;                    &lt;/xsl:if>&#xa;                    &lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:ConsolidatedLocation&quot;>&#xa;                        &lt;tns4:Warehouse>&#xa;                            &lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:ConsolidatedLocation&quot;/>&#xa;                        &lt;/tns4:Warehouse>&#xa;                    &lt;/xsl:if>&#xa;                &lt;/tns4:Header>&#xa;                &lt;xsl:for-each select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Details&quot;>&#xa;                    &lt;tns4:Details>&#xa;                        &lt;xsl:if test=&quot;tns:CustomerItemID&quot;>&#xa;                            &lt;tns4:CustomerItemID>&#xa;                                &lt;xsl:value-of select=&quot;tns:CustomerItemID&quot;/>&#xa;                            &lt;/tns4:CustomerItemID>&#xa;                        &lt;/xsl:if>&#xa;                        &lt;tns4:LineNumber>&#xa;                            &lt;xsl:value-of select=&quot;xsd:int(tns:OrderLineID)&quot;/>&#xa;                        &lt;/tns4:LineNumber>&#xa;                        &lt;xsl:for-each select=&quot;tns:Item&quot;>&#xa;                            &lt;tns4:Item>&#xa;                                &lt;tns4:ID>&#xa;                                    &lt;xsl:value-of select=&quot;tns:ID&quot;/>&#xa;                                &lt;/tns4:ID>&#xa;                                &lt;xsl:for-each select=&quot;tns:Description&quot;>&#xa;                                    &lt;tns4:Description>&#xa;                                        &lt;xsl:value-of select=&quot;.&quot;/>&#xa;                                    &lt;/tns4:Description>&#xa;                                &lt;/xsl:for-each>&#xa;                                &lt;xsl:for-each select=&quot;tns:UnitPrice&quot;>&#xa;                                    &lt;tns4:UnitPrice>&#xa;                                        &lt;tns4:CurrencyCode>&#xa;                                            &lt;xsl:value-of select=&quot;tns:CurrencyCode&quot;/>&#xa;                                        &lt;/tns4:CurrencyCode>&#xa;                                        &lt;tns4:Value>&#xa;                                            &lt;xsl:value-of select=&quot;xsd:decimal(tns:Value)&quot;/>&#xa;                                        &lt;/tns4:Value>&#xa;                                    &lt;/tns4:UnitPrice>&#xa;                                &lt;/xsl:for-each>&#xa;                                &lt;tns4:Rebate>&#xa;                                    &lt;xsl:if test=&quot;../tns:ContractID&quot;>&#xa;                                        &lt;tns4:ContractNumber>&#xa;                                            &lt;xsl:value-of select=&quot;../tns:ContractID&quot;/>&#xa;                                        &lt;/tns4:ContractNumber>&#xa;                                    &lt;/xsl:if>&#xa;                                    &lt;tns4:ContractCost>&#xa;                                        &lt;xsl:value-of select=&quot;xsd:decimal(../tns:ContractCost/tns:Value)&quot;/>&#xa;                                    &lt;/tns4:ContractCost>&#xa;                                &lt;/tns4:Rebate>&#xa;                            &lt;/tns4:Item>&#xa;                        &lt;/xsl:for-each>&#xa;                        &lt;xsl:for-each select=&quot;tns:OriginalOrderQuantity&quot;>&#xa;                            &lt;tns4:OriginalOrderQuantity>&#xa;                                &lt;tns4:Quantity>&#xa;                                    &lt;xsl:value-of select=&quot;.&quot;/>&#xa;                                &lt;/tns4:Quantity>&#xa;                                &lt;xsl:choose>&#xa;                                    &lt;xsl:when test=&quot;string-length(@ERPunitCode) > 0&quot;>&#xa;                                        &lt;xsl:if test=&quot;@ERPunitCode&quot;>&#xa;                                            &lt;tns4:UOM>&#xa;                                                &lt;xsl:value-of select=&quot;@ERPunitCode&quot;/>&#xa;                                            &lt;/tns4:UOM>&#xa;                                        &lt;/xsl:if>&#xa;                                    &lt;/xsl:when>&#xa;                                    &lt;xsl:otherwise>&#xa;                                        &lt;xsl:if test=&quot;@unitCode&quot;>&#xa;                                            &lt;tns4:UOM>&#xa;                                                &lt;xsl:value-of select=&quot;@unitCode&quot;/>&#xa;                                            &lt;/tns4:UOM>&#xa;                                        &lt;/xsl:if>&#xa;                                    &lt;/xsl:otherwise>&#xa;                                &lt;/xsl:choose>&#xa;                            &lt;/tns4:OriginalOrderQuantity>&#xa;                        &lt;/xsl:for-each>&#xa;                    &lt;/tns4:Details>&#xa;                &lt;/xsl:for-each>&#xa;            &lt;/tns4:CustomerOrder>&#xa;        &lt;/tns4:deliverOrderElement>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://tns.tibco.com/bw/json/1672935689456&quot; xmlns:tns=&quot;http://com.imperialdade/schema/canonical/v1&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;ReceiveCanonicalData&quot;/>&lt;xsl:template name=&quot;TransformCanonical2-input&quot; match=&quot;/&quot;>&lt;tns4:deliverOrderElement>&lt;tns4:CustomerOrder>&lt;tns4:Header>&lt;tns4:CustomerID>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerID&quot;/>&lt;/tns4:CustomerID>&lt;tns4:OrderType>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:OrderType&quot;/>&lt;/tns4:OrderType>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:AllowBackOrders&quot;>&lt;tns4:AllowBackOrder>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:AllowBackOrders&quot;/>&lt;/tns4:AllowBackOrder>&lt;/xsl:if>&lt;tns4:CustomerOrderID>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerOrderID&quot;/>&lt;/tns4:CustomerOrderID>&lt;tns4:OrderDate>&lt;xsl:value-of select=&quot;format-date($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:OrderDate, '[Y0001][M01][D01]')&quot;/>&lt;/tns4:OrderDate>&lt;tns4:Shipment>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToID&quot;>&lt;tns4:ShipToID>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToID&quot;/>&lt;/tns4:ShipToID>&lt;/xsl:if>&lt;tns4:ShipToAddress>&lt;tns4:Contact>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:Contact/tns:Name&quot;>&lt;tns4:Name>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:Contact/tns:Name&quot;/>&lt;/tns4:Name>&lt;/xsl:if>&lt;/tns4:Contact>&lt;xsl:for-each select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:AddressLine&quot;>&lt;tns4:AddressLine>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns4:AddressLine>&lt;/xsl:for-each>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:City&quot;>&lt;tns4:City>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:City&quot;/>&lt;/tns4:City>&lt;/xsl:if>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:State&quot;>&lt;tns4:State>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:State&quot;/>&lt;/tns4:State>&lt;/xsl:if>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:ZipCode&quot;>&lt;tns4:ZipCode>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:ShipToAddress/tns:ZipCode&quot;/>&lt;/tns4:ZipCode>&lt;/xsl:if>&lt;/tns4:ShipToAddress>&lt;tns4:RequestedShipDate>&lt;xsl:value-of select=&quot;format-date($ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:Shipment/tns:RequestedShipDate, '[Y0001][M01][D01]')&quot;/>&lt;/tns4:RequestedShipDate>&lt;/tns4:Shipment>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerPO&quot;>&lt;tns4:CustomerPO>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:CustomerPO&quot;/>&lt;/tns4:CustomerPO>&lt;/xsl:if>&lt;xsl:if test=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:ConsolidatedLocation&quot;>&lt;tns4:Warehouse>&lt;xsl:value-of select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Header/tns:ConsolidatedLocation&quot;/>&lt;/tns4:Warehouse>&lt;/xsl:if>&lt;/tns4:Header>&lt;xsl:for-each select=&quot;$ReceiveCanonicalData/Body/tns:CustomerOrder/tns:Details&quot;>&lt;tns4:Details>&lt;xsl:if test=&quot;tns:CustomerItemID&quot;>&lt;tns4:CustomerItemID>&lt;xsl:value-of select=&quot;tns:CustomerItemID&quot;/>&lt;/tns4:CustomerItemID>&lt;/xsl:if>&lt;tns4:LineNumber>&lt;xsl:value-of select=&quot;xsd:int(tns:OrderLineID)&quot;/>&lt;/tns4:LineNumber>&lt;xsl:for-each select=&quot;tns:Item&quot;>&lt;tns4:Item>&lt;tns4:ID>&lt;xsl:value-of select=&quot;tns:ID&quot;/>&lt;/tns4:ID>&lt;xsl:for-each select=&quot;tns:Description&quot;>&lt;tns4:Description>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns4:Description>&lt;/xsl:for-each>&lt;xsl:for-each select=&quot;tns:UnitPrice&quot;>&lt;tns4:UnitPrice>&lt;tns4:CurrencyCode>&lt;xsl:value-of select=&quot;tns:CurrencyCode&quot;/>&lt;/tns4:CurrencyCode>&lt;tns4:Value>&lt;xsl:value-of select=&quot;xsd:decimal(tns:Value)&quot;/>&lt;/tns4:Value>&lt;/tns4:UnitPrice>&lt;/xsl:for-each>&lt;tns4:Rebate>&lt;xsl:if test=&quot;../tns:ContractID&quot;>&lt;tns4:ContractNumber>&lt;xsl:value-of select=&quot;../tns:ContractID&quot;/>&lt;/tns4:ContractNumber>&lt;/xsl:if>&lt;tns4:ContractCost>&lt;xsl:value-of select=&quot;xsd:decimal(../tns:ContractCost/tns:Value)&quot;/>&lt;/tns4:ContractCost>&lt;/tns4:Rebate>&lt;/tns4:Item>&lt;/xsl:for-each>&lt;xsl:for-each select=&quot;tns:OriginalOrderQuantity&quot;>&lt;tns4:OriginalOrderQuantity>&lt;tns4:Quantity>&lt;xsl:value-of select=&quot;.&quot;/>&lt;/tns4:Quantity>&lt;xsl:choose>&lt;xsl:when test=&quot;string-length(@ERPunitCode) > 0&quot;>&lt;xsl:if test=&quot;@ERPunitCode&quot;>&lt;tns4:UOM>&lt;xsl:value-of select=&quot;@ERPunitCode&quot;/>&lt;/tns4:UOM>&lt;/xsl:if>&lt;/xsl:when>&lt;xsl:otherwise>&lt;xsl:if test=&quot;@unitCode&quot;>&lt;tns4:UOM>&lt;xsl:value-of select=&quot;@unitCode&quot;/>&lt;/tns4:UOM>&lt;/xsl:if>&lt;/xsl:otherwise>&lt;/xsl:choose>&lt;/tns4:OriginalOrderQuantity>&lt;/xsl:for-each>&lt;/tns4:Details>&lt;/xsl:for-each>&lt;/tns4:CustomerOrder>&lt;/tns4:deliverOrderElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                     </tibex:inputBindings>
                     <tibex:config>
                         <bwext:BWActivity
@@ -2440,7 +2496,7 @@
                         <bpws:target linkName="MapperToRenderJSON"/>
                     </bpws:targets>
                     <bpws:sources>
-                        <bpws:source linkName="RenderJSONToputOrderFile1"/>
+                        <bpws:source linkName="RenderOrder2ToCallProcess"/>
                         <bpws:source linkName="RenderOrder2ToThrow"
                             tibex:faultDetailsVar="RenderOrder2" tibex:faultNameVar="FaultName">
                             <tibex:DesignExpression>
@@ -2479,6 +2535,25 @@
                         </bwext:BWActivity>
                     </tibex:config>
                 </tibex:activityExtension>
+            </bpws:extensionActivity>
+            <bpws:extensionActivity>
+                <tibex:extActivity inputVariable="EDIParser-input"
+                    name="EDIParser" outputVariable="EDIParser"
+                    tibex:xpdlId="e73e07e8-329e-4df7-a5bb-da26f286ec89"
+                    type="bw.generalactivities.callprocess" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    <bpws:targets>
+                        <bpws:target linkName="RenderOrder2ToCallProcess"/>
+                    </bpws:targets>
+                    <bpws:sources>
+                        <bpws:source linkName="EDIParserToputOrderFile"/>
+                    </bpws:sources>
+                    <tibex:inputBindings>
+                        <tibex:inputBinding coercion=""
+                            expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns4=&quot;http://tns.tibco.com/bw/json/1672935689456&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;TransformCanonical2&quot;/>&lt;xsl:template name=&quot;EDIParser-input&quot; match=&quot;/&quot;>&lt;tns4:deliverOrderElement>&lt;xsl:copy-of select=&quot;$TransformCanonical2/tns4:CustomerOrder&quot;/>&lt;/tns4:deliverOrderElement>&lt;/xsl:template>&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                    </tibex:inputBindings>
+                    <tibex:CallProcess
+                        subProcessName="order.EDIConversion" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions"/>
+                </tibex:extActivity>
             </bpws:extensionActivity>
         </bpws:flow>
     </bpws:scope>

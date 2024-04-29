@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EDIHeader" xmlns:tns="http://www.example.org/EDIHeader" elementFormDefault="qualified">
+
+    <complexType name="EDIHeaderRecord">
+    	<sequence>
+    		<element name="Header" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="TradingPartnerID" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="zz" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Header" type="tns:EDIHeaderRecord"></element>
+</schema>

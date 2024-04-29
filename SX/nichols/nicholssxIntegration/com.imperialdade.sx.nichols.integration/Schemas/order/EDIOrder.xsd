@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EDI850" xmlns:tns="http://www.example.org/EDI850" elementFormDefault="qualified">
+
+    <complexType name="ORDERRecord">
+    	<sequence>
+    		<element name="Order" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="PONumber" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Suffix" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="TradingPartnerID" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="AttentionOf" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="Buyer" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="ConfirmingOnly" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="ShipViaDescription" type="string"
+    			maxOccurs="1" minOccurs="0">
+    		</element>
+    		<element name="FOBFlag" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="FOBDescription" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DatePOIssued" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DateNeeded" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ContractNumber" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Type" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Schedule" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ActionType" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="RequestShipDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CurrencyCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Reference" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CancelDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ShippingInstructions" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField1" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField2" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField3" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField4" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Warehouse" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="BackOrderFlag" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="SubstituteFlag" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="RushOrderFlag" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="BatchName" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ExpectedShipDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CompanyerpSysId" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="erpSystemName" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Expedite " type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="WholeOrderDisc" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="WholeOrderDiscType" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="TiedSalesOrderNo" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Suffix_2" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CustomerPO" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ShipViaType" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="FreightTermsCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="FreightTermsDesc" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="FreightBillAccount" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="TransferLocation" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="OrderOriginCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    	</sequence>
+    </complexType>
+    
+    <element name="Order" type="tns:ORDERRecord"></element>
+</schema>

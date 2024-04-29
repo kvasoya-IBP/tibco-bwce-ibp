@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.tibco.bw</groupId>
-    <artifactId>com.imperialdade.s2k.qoh.application.parent</artifactId>
+    <artifactId>com.imperialdade.s2k.order.application.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../../S2K/s2kQOH/com.imperialdade.s2k.qoh.application.parent</relativePath>
+    <relativePath>../../S2K/s2kOrder/com.imperialdade.s2k.order.application.parent</relativePath>
   </parent>
   <artifactId>com.imperialdade.common.httpconnector.connection</artifactId>
   <packaging>bwmodule</packaging>

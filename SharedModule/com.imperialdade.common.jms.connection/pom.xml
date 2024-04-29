@@ -4,9 +4,9 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.tibco.bw</groupId>
-    <artifactId>com.imperialdade.s2k.shipment.application.parent</artifactId>
+    <artifactId>com.imperialdade.sx.nichols.integration.application.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../../S2K/s2kShipment/com.imperialdade.s2k.shipment.application.parent</relativePath>
+    <relativePath>../../SX/nichols/nicholssxIntegration/com.imperialdade.sx.nichols.integration.application.parent</relativePath>
   </parent>
   <artifactId>com.imperialdade.common.jms.connection</artifactId>
   <packaging>bwmodule</packaging>

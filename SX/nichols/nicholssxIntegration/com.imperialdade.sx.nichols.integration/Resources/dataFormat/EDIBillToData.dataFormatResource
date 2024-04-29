@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:EDIShipTo="http://www.example.org/EDIShipTo" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_rsTOIQQhEe-TSLPtDWVtIA" name="dataFormat.EDIBillToData" type="dataformat:DataFormat">
+  <imports xmi:id="_Ypo4sAQlEe-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDI850"/>
+  <imports xmi:id="_D-5uAAQwEe-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" location="../../Schemas/order/EDIBillTo.xsd" namespace="http://www.example.org/EDIShipTo"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_rsTOIgQhEe-TSLPtDWVtIA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="EDIShipTo:BillTo" lineLength="271" fieldOffsetsStr="BillTo(1,6)&#xA;SXNumber(7,26)&#xA;Name(27,61)&#xA;Address1(62,96)&#xA;Address2(97,131)&#xA;City(132,151)&#xA;State(152,153)&#xA;Zip(154,163)&#xA;PhoneNumber(164,181)&#xA;UserField1(182,189)&#xA;UserField2(190,197)&#xA;DUNSNumber(198,210)&#xA;Address3(211,240)&#xA;ExpandedCity(241,268)&#xA;CountryCode(269,270)">
+    <fieldOffsets xmi:id="_OhEFMAQwEe-TSLPtDWVtIA" name="BillTo" start="1" end="6"/>
+    <fieldOffsets xmi:id="_D_8P0AQwEe-TSLPtDWVtIA" name="SXNumber" start="7" end="26"/>
+    <fieldOffsets xmi:id="_D_8P0QQwEe-TSLPtDWVtIA" name="Name" start="27" end="61"/>
+    <fieldOffsets xmi:id="_D_8P0gQwEe-TSLPtDWVtIA" name="Address1" start="62" end="96"/>
+    <fieldOffsets xmi:id="_D_8P0wQwEe-TSLPtDWVtIA" name="Address2" start="97" end="131"/>
+    <fieldOffsets xmi:id="_D_8P1AQwEe-TSLPtDWVtIA" name="City" start="132" end="151"/>
+    <fieldOffsets xmi:id="_D_8P1QQwEe-TSLPtDWVtIA" name="State" start="152" end="153"/>
+    <fieldOffsets xmi:id="_D_8P1gQwEe-TSLPtDWVtIA" name="Zip" start="154" end="163"/>
+    <fieldOffsets xmi:id="_D_8P1wQwEe-TSLPtDWVtIA" name="PhoneNumber" start="164" end="181"/>
+    <fieldOffsets xmi:id="_YrEcJQQlEe-TSLPtDWVtIA" name="UserField1" start="182" end="189"/>
+    <fieldOffsets xmi:id="_YrEcJgQlEe-TSLPtDWVtIA" name="UserField2" start="190" end="197"/>
+    <fieldOffsets xmi:id="_D_8P2AQwEe-TSLPtDWVtIA" name="DUNSNumber" start="198" end="210"/>
+    <fieldOffsets xmi:id="_D_8P3AQwEe-TSLPtDWVtIA" name="Address3" start="211" end="240"/>
+    <fieldOffsets xmi:id="_D_8P3QQwEe-TSLPtDWVtIA" name="ExpandedCity" start="241" end="268"/>
+    <fieldOffsets xmi:id="_D_8P3gQwEe-TSLPtDWVtIA" name="CountryCode" start="269" end="270"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -1,8 +1,8 @@
-Manifest-Version: 1.0.0.202404011203
+Manifest-Version: 1.0.0.202404261243
 Bundle-ManifestVersion: 2
 Bundle-Name: Com Imperialdade nichols Integration Module
 Bundle-SymbolicName: com.imperialdade.sx.nichols.integration
-Bundle-Version: 1.0.0.202404011203
+Bundle-Version: 1.0.0.202404261243
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ModuleSharedVariables: META-INF/module.msv
 Require-Capability: com.tibco.bw.model; filter:="(name=bwext)",com.tibco

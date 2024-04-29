@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/EDIASNHeader" elementFormDefault="qualified" targetNamespace="http://www.example.org/EDIASNHeader">
+
+    <complexType name="EDIASNHeaderRecord">
+    	<sequence>
+    		<element name="NewElement" type="string"></element>
+    	</sequence>
+    </complexType>
+
+    <element name="ASNHeader" type="tns:EDIASNHeaderRecord"></element>
+</schema>

@@ -4,11 +4,13 @@
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>com.tibco.bw</groupId>
-    <artifactId>com.imperialdade.p21.wp.integration.application.parent</artifactId>
+    <artifactId>com.imperialdade.sx.nichols.integration.application.parent</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <relativePath>../../WP/p12/wpp21Integration/com.imperialdade.p21.wp.integration.application.parent</relativePath>
+    <relativePath>../../SX/nichols/nicholssxIntegration/com.imperialdade.sx.nichols.integration.application.parent</relativePath>
   </parent>
+  <groupId>com.tibco.bw</groupId>
   <artifactId>com.imperialdade.common.jdbc.connection</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
   <packaging>bwmodule</packaging>
   <build>
     <sourceDirectory>src</sourceDirectory>

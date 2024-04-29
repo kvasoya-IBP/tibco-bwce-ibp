@@ -561,7 +561,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//com.imperialdade.sx.nichols.integration///Configuration/ShipmentFileLocation/RemoteDir</name>
-			<value>/imperialdade-prod/sx/nichols/shipment/out/</value>
+			<value>/imperialdade-uat/sx/nichols/shipment/out/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -570,7 +570,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//com.imperialdade.sx.nichols.integration///Configuration/ShipmentFileLocation/ArchiveDir</name>
-			<value>/imperialdade-prod/sx/nichols/shipment/out/archive/</value>
+			<value>/imperialdade-uat/sx/nichols/shipment/out/archive/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>
@@ -624,7 +624,7 @@
 		</globalVariable>
 		<globalVariable>
 			<name>//com.imperialdade.sx.nichols.integration///Configuration/ShipmentFileLocation/ErrorDir</name>
-			<value>/imperialdade-prod/sx/nichols/shipment/out/error/</value>
+			<value>/imperialdade-uat/sx/nichols/shipment/out/error/</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
 			<type>String</type>

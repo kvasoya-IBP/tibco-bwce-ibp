@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:EDI850="http://www.example.org/EDI850" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_rsTOIQQhEe-TSLPtDWVtIA" name="dataFormat.EDIOrderData" type="dataformat:DataFormat">
+  <imports xmi:id="_Ypo4sAQlEe-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDI850"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_rsTOIgQhEe-TSLPtDWVtIA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" fillWith="" schemaElementQName="EDI850:Order" lineLength="664" fieldOffsetsStr="Order(0,6)&#xA;PONumber(6,28)&#xA;Suffix(28,30)&#xA;TradingPartnerID(30,45)&#xA;AttentionOf(45,81)&#xA;Buyer(81,89)&#xA;ConfirmingOnly(89,90)&#xA;ShipViaDescription(90,114)&#xA;FOBFlag(114,115)&#xA;FOBDescription(115,145)&#xA;DatePOIssued(145,153)&#xA;DateNeeded(153,161)&#xA;ContractNumber(161,185)&#xA;Type(185,187)&#xA;Schedule(187,202)&#xA;ActionType(202,213)&#xA;RequestShipDate(213,221)&#xA;CurrencyCode(221,244)&#xA;Reference(244,268)&#xA;CancelDate(268,276)&#xA;ShippingInstructions(276,306)&#xA;UserField1(306,386)&#xA;UserField2(386,466)&#xA;UserField3(466,474)&#xA;UserField4(474,482)&#xA;Warehouse(482,486)&#xA;BackOrderFlag(486,487)&#xA;SubstituteFlag(487,488)&#xA;RushOrderFlag(488,489)&#xA;BatchName(489,497)&#xA;ExpectedShipDate(497,505)&#xA;CompanyerpSysId(505,509)&#xA;erpSystemName(509,524)&#xA;Expedite(524,525)&#xA;WholeOrderDisc(525,540)&#xA;WholeOrderDiscType(540,541)&#xA;TiedSalesOrderNo(541,549)&#xA;Suffix_2(549,551)&#xA;CustomerPO(551,573)&#xA;ShipViaType(573,577)&#xA;FreightTermsCode(577,587)&#xA;FreightTermsDesc(587,611)&#xA;FreightBillAccount(611,635)&#xA;TransferLocation(635,659)&#xA;OrderOriginCode(659,663)">
+    <fieldOffsets xmi:id="_YrEcEAQlEe-TSLPtDWVtIA" name="Order" end="6"/>
+    <fieldOffsets xmi:id="_YrEcEQQlEe-TSLPtDWVtIA" name="PONumber" start="6" end="28"/>
+    <fieldOffsets xmi:id="_YrEcEgQlEe-TSLPtDWVtIA" name="Suffix" start="28" end="30"/>
+    <fieldOffsets xmi:id="_YrEcEwQlEe-TSLPtDWVtIA" name="TradingPartnerID" start="30" end="45"/>
+    <fieldOffsets xmi:id="_YrEcFAQlEe-TSLPtDWVtIA" name="AttentionOf" start="45" end="81"/>
+    <fieldOffsets xmi:id="_YrEcFQQlEe-TSLPtDWVtIA" name="Buyer" start="81" end="89"/>
+    <fieldOffsets xmi:id="_YrEcFgQlEe-TSLPtDWVtIA" name="ConfirmingOnly" start="89" end="90"/>
+    <fieldOffsets xmi:id="_YrEcFwQlEe-TSLPtDWVtIA" name="ShipViaDescription" start="90" end="114"/>
+    <fieldOffsets xmi:id="_YrEcGAQlEe-TSLPtDWVtIA" name="FOBFlag" start="114" end="115"/>
+    <fieldOffsets xmi:id="_YrEcGQQlEe-TSLPtDWVtIA" name="FOBDescription" start="115" end="145"/>
+    <fieldOffsets xmi:id="_YrEcGgQlEe-TSLPtDWVtIA" name="DatePOIssued" start="145" end="153"/>
+    <fieldOffsets xmi:id="_YrEcGwQlEe-TSLPtDWVtIA" name="DateNeeded" start="153" end="161"/>
+    <fieldOffsets xmi:id="_YrEcHAQlEe-TSLPtDWVtIA" name="ContractNumber" start="161" end="185"/>
+    <fieldOffsets xmi:id="_YrEcHQQlEe-TSLPtDWVtIA" name="Type" start="185" end="187"/>
+    <fieldOffsets xmi:id="_YrEcHgQlEe-TSLPtDWVtIA" name="Schedule" start="187" end="202"/>
+    <fieldOffsets xmi:id="_YrEcHwQlEe-TSLPtDWVtIA" name="ActionType" start="202" end="213"/>
+    <fieldOffsets xmi:id="_YrEcIAQlEe-TSLPtDWVtIA" name="RequestShipDate" start="213" end="221"/>
+    <fieldOffsets xmi:id="_YrEcIQQlEe-TSLPtDWVtIA" name="CurrencyCode" start="221" end="244"/>
+    <fieldOffsets xmi:id="_YrEcIgQlEe-TSLPtDWVtIA" name="Reference" start="244" end="268"/>
+    <fieldOffsets xmi:id="_YrEcIwQlEe-TSLPtDWVtIA" name="CancelDate" start="268" end="276"/>
+    <fieldOffsets xmi:id="_YrEcJAQlEe-TSLPtDWVtIA" name="ShippingInstructions" start="276" end="306"/>
+    <fieldOffsets xmi:id="_YrEcJQQlEe-TSLPtDWVtIA" name="UserField1" start="306" end="386"/>
+    <fieldOffsets xmi:id="_YrEcJgQlEe-TSLPtDWVtIA" name="UserField2" start="386" end="466"/>
+    <fieldOffsets xmi:id="_YrEcJwQlEe-TSLPtDWVtIA" name="UserField3" start="466" end="474"/>
+    <fieldOffsets xmi:id="_YrEcKAQlEe-TSLPtDWVtIA" name="UserField4" start="474" end="482"/>
+    <fieldOffsets xmi:id="_YrEcKQQlEe-TSLPtDWVtIA" name="Warehouse" start="482" end="486"/>
+    <fieldOffsets xmi:id="_YrEcKgQlEe-TSLPtDWVtIA" name="BackOrderFlag" start="486" end="487"/>
+    <fieldOffsets xmi:id="_YrEcKwQlEe-TSLPtDWVtIA" name="SubstituteFlag" start="487" end="488"/>
+    <fieldOffsets xmi:id="_YrEcLAQlEe-TSLPtDWVtIA" name="RushOrderFlag" start="488" end="489"/>
+    <fieldOffsets xmi:id="_YrEcLQQlEe-TSLPtDWVtIA" name="BatchName" start="489" end="497"/>
+    <fieldOffsets xmi:id="_YrEcLgQlEe-TSLPtDWVtIA" name="ExpectedShipDate" start="497" end="505"/>
+    <fieldOffsets xmi:id="_YrEcLwQlEe-TSLPtDWVtIA" name="CompanyerpSysId" start="505" end="509"/>
+    <fieldOffsets xmi:id="_YrEcMAQlEe-TSLPtDWVtIA" name="erpSystemName" start="509" end="524"/>
+    <fieldOffsets xmi:id="_YrEcMQQlEe-TSLPtDWVtIA" name="Expedite" start="524" end="525"/>
+    <fieldOffsets xmi:id="_YrEcMgQlEe-TSLPtDWVtIA" name="WholeOrderDisc" start="525" end="540"/>
+    <fieldOffsets xmi:id="_YrEcMwQlEe-TSLPtDWVtIA" name="WholeOrderDiscType" start="540" end="541"/>
+    <fieldOffsets xmi:id="_YrEcNAQlEe-TSLPtDWVtIA" name="TiedSalesOrderNo" start="541" end="549"/>
+    <fieldOffsets xmi:id="_YrEcNQQlEe-TSLPtDWVtIA" name="Suffix_2" start="549" end="551"/>
+    <fieldOffsets xmi:id="_YrEcNgQlEe-TSLPtDWVtIA" name="CustomerPO" start="551" end="573"/>
+    <fieldOffsets xmi:id="_YrEcNwQlEe-TSLPtDWVtIA" name="ShipViaType" start="573" end="577"/>
+    <fieldOffsets xmi:id="_YrEcOAQlEe-TSLPtDWVtIA" name="FreightTermsCode" start="577" end="587"/>
+    <fieldOffsets xmi:id="_YrEcOQQlEe-TSLPtDWVtIA" name="FreightTermsDesc" start="587" end="611"/>
+    <fieldOffsets xmi:id="_YrEcOgQlEe-TSLPtDWVtIA" name="FreightBillAccount" start="611" end="635"/>
+    <fieldOffsets xmi:id="_YrEcOwQlEe-TSLPtDWVtIA" name="TransferLocation" start="635" end="659"/>
+    <fieldOffsets xmi:id="_YrEcPAQlEe-TSLPtDWVtIA" name="OrderOriginCode" start="659" end="663"/>
+  </jndi:configuration>
+</jndi:namedResource>

@@ -2429,7 +2429,8 @@
                             <activityConfig>
                                 <properties name="config" xsi:type="activityconfig:EMFProperty">
                                     <type href="http://ns.tibco.com/bw/palette/jms#//JMSReceiverEventSource"/>
-                                    <value ackMode="Client"
+                                    <value
+                                    ackMode="TIBCO EMS Explicit Client"
                                     appPropsReference="com.tibco.bw.plugin.jms.properties50f0ba48-adc3-4119-82dc-01036ea94dbeJMSApplicationProperties:jmsAppPropType"
                                     bodyTypeQName="v1:CustomerOrder"
                                     connectionReference="jmsConnection"

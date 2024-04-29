@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:EDITotalTo="http://www.example.org/EDITotalTo" xmlns:dataformat="http://ns.tibco.com/bw/palette/dataformat" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_t_HgIQQzEe-TSLPtDWVtIA" name="dataFormat.EDITotalData" type="dataformat:DataFormat">
+  <imports xmi:id="_wZ1PEAQzEe-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDIShipTo"/>
+  <imports xmi:id="_HFGhIAS4Ee-TSLPtDWVtIA" importType="http://www.w3.org/2001/XMLSchema" namespace="http://www.example.org/EDITotalTo"/>
+  <jndi:configuration xsi:type="dataformat:DataFormat" xmi:id="_t_HgIgQzEe-TSLPtDWVtIA" formatType="Fixed format" colSeparator="," colSeparatorParseRule="Treat all characters as entered as a single column separator string" lineSeparator="New Line" fillCharacter="Space" schemaElementQName="EDITotalTo:Total" lineLength="39" fieldOffsetsStr="Total(0,6)&#xA;TotalNumberofLines(6,12)&#xA;TotalInvoiceAmount(12,26)&#xA;TotalQuantityOrdered(26,38)">
+    <fieldOffsets xmi:id="_wat_4AQzEe-TSLPtDWVtIA" name="Total" end="6"/>
+    <fieldOffsets xmi:id="_wat_4QQzEe-TSLPtDWVtIA" name="TotalNumberofLines" start="6" end="12"/>
+    <fieldOffsets xmi:id="_wat_4gQzEe-TSLPtDWVtIA" name="TotalInvoiceAmount" start="12" end="26"/>
+    <fieldOffsets xmi:id="_wat_4wQzEe-TSLPtDWVtIA" name="TotalQuantityOrdered" start="26" end="38"/>
+  </jndi:configuration>
+</jndi:namedResource>

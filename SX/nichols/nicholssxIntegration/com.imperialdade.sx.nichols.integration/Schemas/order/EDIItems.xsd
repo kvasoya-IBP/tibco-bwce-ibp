@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/EDIItems" xmlns:tns="http://www.example.org/EDIItems" elementFormDefault="qualified">
+
+    <complexType name="ItemRecord">
+    	<sequence>
+    		<element name="Item" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="LineNumber" type="string" maxOccurs="1"
+    			minOccurs="0">
+    		</element>
+    		<element name="QtyOrdered" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UnitofMeasure" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UnitCost" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UOM" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CustomerPartNo" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DistributorPartNo" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="MFGPartNumber" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Description" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DateNeeded" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField1" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField2" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField3" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField4" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField5" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField6" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField7" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField8" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField9" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="UserField10" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="PromiseDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="DueDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ExpectedShipDate" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="EDILineNo" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="eBayDescription" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="NetAmount" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="TaxAmount" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Discount" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="SpecialPriceCost" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="StockUnitCost" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="EDIUnitCost" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Expedite" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ExpediteDays" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ExpandedVendorProduct" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="ManufacturerPart" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="BrandCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="CustomerPart" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="AdditionalPrintInfo" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="Countryoforigin" type="string" maxOccurs="1" minOccurs="0"></element>
+    		<element name="HarmonizedSystemTariffCode" type="string" maxOccurs="1" minOccurs="0"></element>
+    		
+    	</sequence>
+    </complexType>
+    
+
+    <element name="Item" type="tns:ItemRecord"></element>
+    
+</schema>

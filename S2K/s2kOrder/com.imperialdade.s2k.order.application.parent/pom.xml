@@ -7,12 +7,12 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>../../com.imperialdade.common.canonical</module>
-    <module>../../com.imperialdade.common.httpconnector.connection</module>
-    <module>../../com.imperialdade.common.sftp.connection</module>
-    <module>../../com.imperialdade.common.jms.connection</module>
-    <module>../../com.imperialdade.common.logging</module>
-    <module>../../com.imperialdade.common.jdbc.connection</module>
+    <module>../../../SharedModule/com.imperialdade.common.canonical</module>
+    <module>../../../SharedModule/com.imperialdade.common.httpconnector.connection</module>
+    <module>../../../SharedModule/com.imperialdade.common.sftp.connection</module>
+    <module>../../../SharedModule/com.imperialdade.common.jms.connection</module>
+    <module>../../../SharedModule/com.imperialdade.common.logging</module>
+    <module>../../../SharedModule/com.imperialdade.common.jdbc.connection</module>
     <module>../com.imperialdade.s2k.order</module>
     <module>../com.imperialdade.s2k.order.application</module>
   </modules>

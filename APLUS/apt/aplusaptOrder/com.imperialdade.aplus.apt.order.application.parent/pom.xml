@@ -7,10 +7,10 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>pom</packaging>
   <modules>
-    <module>../../com.imperialdade.common.canonical</module>
-    <module>../../com.imperialdade.common.jms.connection</module>
-    <module>../../com.imperialdade.common.sftp.connection</module>
-    <module>../../com.imperialdade.common.logging</module>
+    <module>../../../../SharedModule/com.imperialdade.common.canonical</module>
+    <module>../../../../SharedModule/com.imperialdade.common.jms.connection</module>
+    <module>../../../../SharedModule/com.imperialdade.common.sftp.connection</module>
+    <module>../../../../SharedModule/com.imperialdade.common.logging</module>
     <module>../com.imperialdade.aplus.apt.order</module>
     <module>../com.imperialdade.aplus.apt.order.application</module>
   </modules>

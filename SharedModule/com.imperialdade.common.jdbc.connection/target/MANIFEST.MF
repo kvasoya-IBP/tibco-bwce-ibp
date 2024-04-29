@@ -1,8 +1,8 @@
-Manifest-Version: 1.0.0.202404221448
+Manifest-Version: 1.0.0.202404261243
 Bundle-ManifestVersion: 2
 Bundle-Name: Com Imperialdade Common Jdbc Connection Module
 Bundle-SymbolicName: com.imperialdade.common.jdbc.connection
-Bundle-Version: 1.0.0.202404221448
+Bundle-Version: 1.0.0.202404261243
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-SharedModule: META-INF/module.bwm

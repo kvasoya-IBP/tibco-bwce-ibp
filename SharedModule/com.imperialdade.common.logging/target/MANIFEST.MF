@@ -1,8 +1,8 @@
-Manifest-Version: 1.0.0.202404241154
+Manifest-Version: 1.0.0.202404290943
 Bundle-ManifestVersion: 2
 Bundle-Name: Com Imperialdade Common Logging Module
 Bundle-SymbolicName: com.imperialdade.common.logging
-Bundle-Version: 1.0.0.202404241154
+Bundle-Version: 1.0.0.202404290943
 Bundle-Vendor: TIBCO Software Inc.
 TIBCO-BW-ConfigProfile: META-INF/default.substvar
 TIBCO-BW-SharedModule: META-INF/module.bwm

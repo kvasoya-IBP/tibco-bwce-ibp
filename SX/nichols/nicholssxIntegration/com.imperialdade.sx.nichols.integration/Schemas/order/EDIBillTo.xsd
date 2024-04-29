@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://www.example.org/EDIBillTo" elementFormDefault="qualified" targetNamespace="http://www.example.org/EDIBillTo">
+     
+  <element name="BillTo" type="tns:BillToRecord"/>
+  
+
+  <complexType name="BillToRecord">
+  	<sequence>
+  		<element name="BillTo" type="string" maxOccurs="1" minOccurs="0"></element>
+  		<element name="SXNumber" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="Name" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="Address1" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="Address2" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="City" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="State" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="Zip" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="PhoneNumber" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name=" UserField1" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name=" UserField2" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="DUNSNumber" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="Address3" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="ExpandedCity" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  		<element name="CountryCode" type="string" maxOccurs="1"
+  			minOccurs="0">
+  		</element>
+  	</sequence>
+  </complexType>
+</schema>
